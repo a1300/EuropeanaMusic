@@ -1,4 +1,4 @@
-package eu.hello;
+package eu.europeana.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,7 +10,7 @@ public class HelloController {
 	@RequestMapping(value="/greeting")
 	public String sayHello(Model model) {
 		
-		model.addAttribute("greeting", "Hello Peanuts");
+		//model.addAttribute("greeting", "Hello Peanuts");
 		
 		return "hello"; //return the view hello.jsp to the user
 	}

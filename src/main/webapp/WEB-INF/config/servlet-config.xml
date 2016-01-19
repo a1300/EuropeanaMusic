@@ -10,18 +10,25 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
 
 	<mvc:annotation-driven/>
-	<context:component-scan base-package="eu.hello" />
-	<!--  before  base-package="com.pluralsight.controller"-->
+	<context:component-scan base-package="eu.europeana.controller" />
 
-	<!-- 
+	<mvc:annotation-driven/>
+	<context:component-scan base-package="com.pluralsight.controller"></context:component-scan>
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/jsp/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+
+ 	<!-- 
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/jsp/"/>
 		<property name="suffix" value=".jsp"/>
-	</bean>
-	 -->
+	</bean> -->
+	 
 	 
 	 <!-- looks in following directory after jsp files -->
+	 <!-- 
 	 <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" 
 	 p:prefix="/WEB-INF/jsp/" p:suffix=".jsp" />
-
+	-->
 </beans>

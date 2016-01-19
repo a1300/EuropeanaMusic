@@ -7,9 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	<h1>This is my greeting</h1>
 	<!-- takes the value 'Hello World' model.addAttribute("greeting", "Hello World"); -->
-	<h1>${greeting}</h1>
+	<!-- <h1>${greeting}</h1> -->
 
 </body>
 </html>
