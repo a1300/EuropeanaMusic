@@ -37,7 +37,7 @@
 
 	<!-- test -->
 	<script src="js/parallax.js"></script>
-	<div class="parallax-window" data-parallax="scroll" data-image-src="img/logoGross.jpeg">
+	<div class="parallax-window" data-parallax="scroll" data-image-src="img/nosColonies.jpeg">
 	</div>
 	
 	<!--navbar start -->
