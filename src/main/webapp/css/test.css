@@ -6,3 +6,8 @@ h2 {
    background: #ffffff;
    background: red;
 }
+
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
+}
