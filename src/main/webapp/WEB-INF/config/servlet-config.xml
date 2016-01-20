@@ -19,16 +19,5 @@
 		<property name="suffix" value=".jsp"></property>
 	</bean>
 
- 	<!-- 
-	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix" value="/WEB-INF/jsp/"/>
-		<property name="suffix" value=".jsp"/>
-	</bean> -->
-	 
-	 
-	 <!-- looks in following directory after jsp files -->
-	 <!-- 
-	 <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" 
-	 p:prefix="/WEB-INF/jsp/" p:suffix=".jsp" />
-	-->
+
 </beans>
