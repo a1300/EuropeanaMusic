@@ -8,8 +8,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>This is my greeting</h1>
+	<h1>This is index.html</h1>
 	<h2>Special greeting from css</h2>
+	<a href="/EuropeanaMusic/heatmap.html">Link to heatmap</a>
 	<!-- <h1>${greeting}</h1> -->
 
 </body>
