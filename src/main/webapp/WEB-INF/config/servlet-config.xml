@@ -19,6 +19,10 @@
 		<property name="suffix" value=".jsp"></property>
 	</bean>
 
+	<!-- new beans -->
+	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource" p:basename="linkNames"></bean>
+
+
 	<mvc:resources location="/css/**" mapping="/css/**"/>
 
 </beans>

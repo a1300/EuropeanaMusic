@@ -59,8 +59,9 @@
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	    <ul class="nav navbar-nav">
-			<li class="active"><a href="/index.html">Home</a></li>
-			<li ><a href="/heatmap.html">Heatmap</a></li>	
+			<li class="active"><a href="/index.html"><spring:message code="home.text"/></a></li>
+			<li ><a href="/heatmap.html"><spring:message code="heatmap.text" /></a></li>
+			<li ><a href="/search.html"><spring:message code="search.text" /></a></li>	
 	   	 </ul>
     	<ul class="nav navbar-nav navbar-right">
 		<li><a href="#">Copyright</a></li>
@@ -71,11 +72,64 @@
 	<!--navbar end -->
 
 
+	<br/>
+	<br/>
+	<br/>
+	<div class="panel panel-info">
+  		<div class="panel-heading">
+  			  <h3 class="panel-title">Lorem ipsum</h3>
+  		</div>
+  		<div class="panel-body panel-info">
+  			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+			incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+			exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+			dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+			Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit 
+			anim id est laborum.		
+ 		 </div>
+	</div>
+		<div class="panel panel-info">
+  		<div class="panel-heading">
+  			  <h3 class="panel-title">Lorem ipsum</h3>
+  		</div>
+  		<div class="panel-body panel-info">
+  			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+			incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+			exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+			dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+			Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit 
+			anim id est laborum.		
+ 		 </div>
+	</div>
+		<div class="panel panel-info">
+  		<div class="panel-heading">
+  			  <h3 class="panel-title">Lorem ipsum</h3>
+  		</div>
+  		<div class="panel-body panel-info">
+  			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+			incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+			exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+			dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+			Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit 
+			anim id est laborum.		
+ 		 </div>
+	</div>
 
-	<h1>This is index.html</h1>
-	<h2>Special greeting from css</h2>
-	<a href="/EuropeanaMusic/heatmap.html">Link to heatmap</a>
-	<!-- <h1>${greeting}</h1> -->
+
+	<div class="panel panel-danger">
+  		<div class="panel-heading">
+  			  <h3 class="panel-title">This is index.html</h3>
+  		</div>
+  		<div class="panel-body panel-info">
+  			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+			incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+			exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+			dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+			Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit 
+			anim id est laborum.
+			<a href="/EuropeanaMusic/heatmap.html">Link to heatmap</a>	
+ 		 </div>
+	</div>
 	
 	
 
