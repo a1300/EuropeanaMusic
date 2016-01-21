@@ -21,7 +21,7 @@
 	<!--  jQuery.js and Bootstrap.js -->
 	<%@ include file="/WEB-INF/jsp/order/scripts.jsp" %>
 
-	<script src="js/parallax.js"></script>
+	
 	<div class="parallax-window" data-parallax="scroll" data-image-src="img/nosColonies.jpeg"></div>	
 	
 	<!-- navbar -->
@@ -30,5 +30,6 @@
 	<!-- just testcontent -->
 	<%@ include file="/WEB-INF/jsp/order/testContent.jsp" %>
 
+	
 </body>
 </html>
