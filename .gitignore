@@ -14,3 +14,7 @@ hs_err_pid*
 /.settings/
 /.classpath
 /.project
+
+
+# added on 21.01.2015
+.externalToolBuilders/**
