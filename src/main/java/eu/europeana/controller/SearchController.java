@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class SearchController {
 	
-	@RequestMapping(value="/search.html", method=RequestMethod.POST)//how we tight this to the url
+	@RequestMapping(value="/search.html", method=RequestMethod.GET)//how we tight this to the url
 	public String search() {
 		
 		return "search";
