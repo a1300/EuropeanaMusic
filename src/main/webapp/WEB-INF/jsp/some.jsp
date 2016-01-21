@@ -9,8 +9,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-	<form:form method="post" action="some.html" commandName="somedata" >
+	<!-- 2nd argument  action="some.html"-->
+	<form:form method="post"  commandName="somedata" >
 	    <table>
 	    <tr>
 	        <td>name</td>
