@@ -3,7 +3,8 @@
 
 <!-- very important -->
 <%@ include file="/WEB-INF/jsp/order/taglibs.jsp" %>
-    
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+ 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -23,8 +24,28 @@
 	<script src="js/parallax.js"></script>
 	<div class="parallax-window" data-parallax="scroll" data-image-src="img/nosColonies.jpeg"></div>	
 	
+
+	
+	
 	<!-- navbar -->
 	<%@ include file="/WEB-INF/jsp/order/navbar.jsp" %>
+
+
+	<!-- Questions forms for the website -->
+	<form:form>
+		<table>
+			<tr>
+				<td>question1</td>
+				<td> <form:input path="question1"/></td>
+			</tr>
+			<tr>    
+				<td colspan="2">
+					<input type="submit" value="answer 1">
+				</td>
+			</tr>
+		
+		</table>
+	</form:form>
 	
 </body>
 </html>
