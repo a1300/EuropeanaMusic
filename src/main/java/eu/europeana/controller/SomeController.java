@@ -14,22 +14,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class SomeController {
 
 	
-	/*
-	@RequestMapping(value="/some", method=RequestMethod.POST)
-	public String someAction(@ModelAttribute("somedata") SomeData data, Map<String, Object> map,
-	                                HttpServletRequest request) {
-
-	       System.out.println("Name=" + data.getName() + " age=" + request.getParameter("age"));
-	       System.out.println("test: " + data.getName());
-	       
-	        //do some process and send back the data
-	        map.put("somedata", data);
-	        map.put("age", request.getParameter("age"));
-
-	        System.out.println("before return");
-	        return "some";
-	   } */
-	
 	@RequestMapping(value="/some", method=RequestMethod.POST)
 	public String someAction(@ModelAttribute("somedata") SomeData data) {
 		
