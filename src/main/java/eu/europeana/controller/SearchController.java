@@ -17,18 +17,15 @@ public class SearchController {
 		
 		System.out.println("POST " + data.getName());
 		
-		System.out.println("map " + map.size());
-		
 		map.put("somedata", data.getName());
 		
-		return "redirect:search.html"; //without redirect
+		return "redirect:search.html";
 	}
 	
 	@RequestMapping(value="/search", method=RequestMethod.GET)
 	public String getAction(Map<String, Object> map) {
 		
 		System.out.println("GET");
-		System.out.println(map.size() == 0);
 		
 		if(map.size() == 0) {
 			SomeData someData = new SomeData();
