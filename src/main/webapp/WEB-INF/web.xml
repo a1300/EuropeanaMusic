@@ -14,13 +14,23 @@
 	</init-param>
 </servlet>
 
-<!--  Routing to a servlet -->
-<servlet-mapping>
-	<!-- Exact same name as in servlet/servlet-name -->
-	<servlet-name>europeanaMusicServlet</servlet-name>
-	<!-- what file extension are we going to expecto for DispatcherServlet -->
-	<url-pattern>*.html</url-pattern>
-</servlet-mapping>
+	<!--  Routing to a servlet -->
+	<servlet-mapping>
+		<!-- Exact same name as in servlet/servlet-name -->
+		<servlet-name>europeanaMusicServlet</servlet-name>
+		<!-- what file extension are we going to expecto for DispatcherServlet -->
+		<url-pattern>*.html</url-pattern>
+	</servlet-mapping>
+	
+	<!-- error page
+	  <error-page>  
+		  <exception-type>java.lang.Exception</exception-type>  
+		  <location>/WEB-INF/jsp/errorPage.jsp</location>  
+	  </error-page> -->
+	 <error-page>  
+  		<error-code>404</error-code>  
+  		<location>/WEB-INF/jsp/errorPage.jsp</location>  
+  	</error-page>
 
   <display-name>Archetype Created Web Application</display-name>
 </web-app>
