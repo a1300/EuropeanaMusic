@@ -25,10 +25,6 @@
 	
 	<!-- navbar -->
 	<%@ include file="/WEB-INF/jsp/order/navbar.jsp" %>
-
-	<!-- just testcontent -->
-	<%@ include file="/WEB-INF/jsp/order/testContent.jsp" %>
-
 	
 </body>
 </html>
