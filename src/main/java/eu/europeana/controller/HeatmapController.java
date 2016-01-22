@@ -9,7 +9,7 @@ public class HeatmapController {
 	@RequestMapping(value="/heatmap")
 	public String callHeatmap() {
 		
-		
+	
 		return "heatmap"; // heatmap.jsp
 	}
 }

@@ -17,9 +17,9 @@
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	    <ul class="nav navbar-nav">
-			<li class="active"><a href="/index.html"><spring:message code="home.text"/></a></li>
-			<li ><a href="/heatmap.html"><spring:message code="heatmap.text" /></a></li>
-			<li ><a href="/search.html"><spring:message code="search.text" /></a></li>	
+			<li class="active"><a href="index.html"><spring:message code="home.text"/></a></li>
+			<li ><a href="heatmap.html"><spring:message code="heatmap.text" /></a></li>
+			<li ><a href="search.html"><spring:message code="search.text" /></a></li>	
 	   	 </ul>
     	<ul class="nav navbar-nav navbar-right">
 		<li><a href="#">Copyright</a></li>
