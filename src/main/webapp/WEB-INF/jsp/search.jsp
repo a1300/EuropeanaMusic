@@ -1,9 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <!-- very important -->
 <%@ include file="/WEB-INF/jsp/order/taglibs.jsp" %>
- 
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -23,30 +21,34 @@
 	<!-- navbar -->
 	<%@ include file="/WEB-INF/jsp/order/navbar.jsp" %>
 	
+	<br/>
+	<br/>
+	<br/>
 	
-	<br/>
-	<br/>
-	<br/>
+	
+	<form method="post" action="${model.pageName}" id="register">
+	    <table>
+		    <tr>
+		        <td>name</td>
+		        <td><input name="name" id="name" /></td>
+		    </tr>
+		    <tr>
+		        <td colspan="2">
+		            <input type="submit" value="send"/>
+		        </td>
+		    </tr>
+		</table>
+	</form>
 	
 
-	<form:form method="post" commandName="somedata">
-	    <table>
-	    <tr>
-	        <td>name</td>
-	        <td><form:input path="name" /></td>
-	    </tr>
-	    <tr>
-	        <td colspan="2">
-	            <input type="submit" value="send"/>
-	        </td>
-	    </tr>
-	</table>
-	</form:form>
-	 
+	
+	<!--  sehr gut ein jsp include machen, wo alles angezeigt wird --> 
 	<table>
 	    <tr>
-	        <td>name</td>
-	        <td>${somedata.name}</td>
+	        <td>Results:</td>
+	    </tr>
+	    <tr>
+	    	<td>${message}</td>
 	    </tr>
  	</table>
  	
