@@ -14,6 +14,11 @@
 	</init-param>
 </servlet>
 
+	<!-- added during meeting -->
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
 	<!--  Routing to a servlet -->
 	<servlet-mapping>
 		<!-- Exact same name as in servlet/servlet-name -->

@@ -21,15 +21,14 @@
 	<!--  jQuery.js and Bootstrap.js -->
 	<%@ include file="/WEB-INF/jsp/order/scripts.jsp" %>
 
-	
-	<div class="parallax-window" data-parallax="scroll" data-image-src="img/nosColonies.jpeg"></div>	
+
+	<div class="parallax-window" data-parallax="scroll" data-image-src="img/nosColonies.jpeg"></div>
 	
 	<!-- navbar -->
 	<%@ include file="/WEB-INF/jsp/order/navbar.jsp" %>
 
 	<!-- just testcontent -->
 	<%@ include file="/WEB-INF/jsp/order/testContent.jsp" %>
-
 	
 </body>
 </html>

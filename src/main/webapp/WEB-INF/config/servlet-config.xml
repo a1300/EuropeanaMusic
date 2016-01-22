@@ -22,6 +22,8 @@
 	<!-- new beans -->
 	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource" p:basename="linkNames"></bean>
 
+	
+	<bean id="handlerMapping" class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" />
 
 	<mvc:resources location="/css/**" mapping="/css/**"/>
 
