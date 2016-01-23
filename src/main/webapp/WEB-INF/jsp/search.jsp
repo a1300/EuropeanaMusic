@@ -21,23 +21,49 @@
 	<!-- navbar -->
 	<%@ include file="/WEB-INF/jsp/order/navbar.jsp" %>
 	
-	<br/>
-	<br/>
-	<br/>
-	
 	
 	<form method="post" action="${model.pageName}" id="register">
-	    <table>
-		    <tr>
-		        <td>name</td>
-		        <td><input name="name" id="name" /></td>
-		    </tr>
-		    <tr>
-		        <td colspan="2">
-		            <input type="submit" value="send"/>
-		        </td>
-		    </tr>
-		</table>
+	    
+	    <div>
+		    <div id="single-field" style="float: left; width: 200px;">
+		    	    <p>author:		</p>
+		    	    <input name="name" id="name" />
+		   		<br>
+		    	<br>
+		    </div>    
+		        
+		    <div id="single-field" style="float: left; width: 200px;">
+		    	    <p>title:		</p>
+		    	    <input name="title" id="title" />
+		    	<br>
+				<br>
+			</div>
+			
+           	<div id="language" class="language" style="float: left; width: 110px;">
+			
+		        <p>language:		</p>
+		        	<input type="checkbox" name="language" value="english" 	id="language">	English	<br>
+					<input type="checkbox" name="language" value="german" 	id="language">	German	<br>
+            		<input type="checkbox" name="language" value="french" 	id="language">	French	<br>
+            		<input type="checkbox" name="language" value="spanish"	id="language">	Spanish	<br>
+ 				<br>	
+			</div>
+			
+			<div id="country" class="country" style="float: left; width: 110px;">
+			    <p>country:		</p>
+		        
+           			<input type="checkbox" name="language" value="english" 	id="language">	English	<br>
+					<input type="checkbox" name="language" value="german" 	id="language">	German	<br>
+            		<input type="checkbox" name="language" value="french" 	id="language">	French	<br>
+            		<input type="checkbox" name="language" value="spanish"	id="language">	Spanish	<br>
+ 				<br>
+ 			</div>
+ 		</div>
+ 				<br><br><br><br><br><br><br><br>
+ 		<div>
+ 			<input type="submit" value="send"/>
+ 		</div>		
+		
 	</form>
 	
 
