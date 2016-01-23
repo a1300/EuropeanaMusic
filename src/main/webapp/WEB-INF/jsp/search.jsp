@@ -25,7 +25,7 @@
 	<form method="post" action="${model.pageName}" id="register">
 	    
 	    <div>
-		    <div id="single-field" style="float: left; width: 200px;">
+		    <div id="single-field" style="float: left; padding-left:20px; width: 200px;">
 		    	    <p>author:		</p>
 		    	    <input name="name" id="name" />
 		   		<br>
@@ -60,7 +60,7 @@
  			</div>
  		</div>
  				<br><br><br><br><br><br><br><br>
- 		<div>
+ 		<div id="send" style="float: left; padding-left:20px; width: 100px;">
  			<input type="submit" value="send"/>
  		</div>		
 		
