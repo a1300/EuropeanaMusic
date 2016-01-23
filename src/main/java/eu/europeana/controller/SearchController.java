@@ -1,7 +1,9 @@
 package eu.europeana.controller;
 
+import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.Map;
+import eu.europeana.model.*;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -77,26 +79,39 @@ public class SearchController /*extends SimpleFormController */ {
 		
 		System.out.println("name: " + request.getParameter("name"));
 		Enumeration parameterNames = request.getParameterNames();
-//		System.out.println("parameterNames: " + parameterNames);
-		
 		
 		System.out.println("title: " + request.getParameter("title"));
 		
-		System.out.println("languageEnglish: " + request.getParameter("languageEnglish"));
+		System.out.println("languageEnglish: " 	+ request.getParameter("languageEnglish"));
+		System.out.println("languageGerman: " 	+ request.getParameter("languageGerman"));
+		System.out.println("languageFrench: " 	+ request.getParameter("languageFrench"));
+		System.out.println("languageSpanish: " 	+ request.getParameter("languageSpanish"));
 		
-		System.out.println("languageEnglish: " + request.getParameter("languageEnglish"));
-		System.out.println("languageGerman: " + request.getParameter("languageGerman"));
-		System.out.println("languageFrench: " + request.getParameter("languageFrench"));
-		System.out.println("languageSpanish: " + request.getParameter("languageSpanish"));
-		
-		System.out.println("countryEngland: " + request.getParameter("countryEngland"));
-		System.out.println("countryGermany: " + request.getParameter("countryGermany"));
-		System.out.println("countryFrance: " + request.getParameter("countryFrance"));
-		System.out.println("countrySpain: " + request.getParameter("countrySpain"));
+		System.out.println("countryEngland: " 	+ request.getParameter("countryEngland"));
+		System.out.println("countryGermany: " 	+ request.getParameter("countryGermany"));
+		System.out.println("countryFrance: " 	+ request.getParameter("countryFrance"));
+		System.out.println("countrySpain: " 	+ request.getParameter("countrySpain"));
 
 		System.out.println("royaltyOpen: " + request.getParameter("royaltyOpen"));
 		System.out.println("royaltyRestricted: " + request.getParameter("royaltyRestricted"));
 		System.out.println("royaltyPermission: " + request.getParameter("royaltyPermission"));
+		
+		ArrayList<String> list = new ArrayList<String>();
+		list.add(request.getParameter("name"));
+		list.add(request.getParameter("title"));
+		list.add(request.getParameter("languageEnglish"));
+		list.add(request.getParameter("languageGerman"));
+		list.add(request.getParameter("languageFrench"));
+		list.add(request.getParameter("languageSpanish"));
+		list.add(request.getParameter("countryEngland"));
+		list.add(request.getParameter("countryGermany"));
+		list.add(request.getParameter("countryFrance"));
+		list.add(request.getParameter("countrySpain"));
+		list.add(request.getParameter("royaltyOpen"));
+		list.add(request.getParameter("royaltyRestricted"));
+		list.add(request.getParameter("royaltyPermission"));
+		
+		QueryString queryString = new QueryString(list);
 		
 		while(parameterNames.hasMoreElements()) {
 			
@@ -122,8 +137,9 @@ public class SearchController /*extends SimpleFormController */ {
 	
 	private ModelAndView handleSearch() {//should we paste here the queryString search?
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("search");
+		mav.setViewName("search"); // die jsp Datei
 		mav.addObject("message", "Europeana Search Results");
+		mav.addObject("titel", "Mein Titel");
 		return mav;
 	}
 }

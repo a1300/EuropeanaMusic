@@ -37,7 +37,7 @@
 		    	<br><br>
 			</div>
 			
-           	<div name="language" id="language" class="language" style="float: left; width: 400px;">
+           	<div  class="language" style="float: left; width: 400px;">
 					<p>Language:		</p>
 		        	<label class="checkbox-inline">
   						<input type="checkbox" name="languageEnglish" value="languageEnglish" 	id="languageEnglish"> English
@@ -105,7 +105,8 @@
 	<div id="send" style="float: left; padding-left:20px; width: 100px;">
  	    <p>Results:</p>
 	    <div id="send" style="float: left; padding-left:20px; width: 700px;">
- 			${message}
+	 		${message}
+	 		${titel}
  		</div>
  	</div>
  	
