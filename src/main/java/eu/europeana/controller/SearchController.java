@@ -27,7 +27,7 @@ public class SearchController /*extends SimpleFormController */ {
 	 * **********************************
 	 * **********************************
 	 * */
-
+	/*
 	@RequestMapping(value="/search", method=RequestMethod.POST)
 	public ModelAndView handlePost(@RequestParam("name") String name, HttpServletRequest request) {
 		
@@ -54,21 +54,49 @@ public class SearchController /*extends SimpleFormController */ {
 		
 		return mav;
 	}
+	*/
 
-/*
 	
 	//richi versuch
-	public ModelAndView handlePost(@RequestParam("name") String name,String title, HttpServletRequest request) {
+	@RequestMapping(value="/search", method=RequestMethod.POST)
+	public ModelAndView handlePost(
+			@RequestParam("name") String name,
+			@RequestParam("title") String title,
+			@RequestParam(value="languageEnglish", required = false)  String languageEnglish,
+			@RequestParam(value="languageGerman", required = false)  String languageGerman,
+			@RequestParam(value="languageFrench", required = false)  String languageFrench,
+			@RequestParam(value="languageSpanish", required = false)  String languageSpanish,
+			@RequestParam(value="countryEngland", required = false) String countryEngland,
+			@RequestParam(value="countryGermany", required = false) String countryGermany,
+			@RequestParam(value="countryFrance", required = false) String countryFrance,
+			@RequestParam(value="countrySpain", required = false) String countrySpain,
+			@RequestParam(value="royaltyOpen", required = false) String royaltyOpen,
+			@RequestParam(value="royaltyRestricted", required = false) String royaltyRestricted,
+			@RequestParam(value="royaltyPermission", required = false) String royaltyPermission, 
+			HttpServletRequest request) {
 		
 		System.out.println("name: " + request.getParameter("name"));
 		Enumeration parameterNames = request.getParameterNames();
-		System.out.println("parameterNames: " + parameterNames);
+//		System.out.println("parameterNames: " + parameterNames);
 		
 		
 		System.out.println("title: " + request.getParameter("title"));
-		Enumeration parameterNames = request.getParameterNames();
-		System.out.println("parameterNames: " + parameterNames);
 		
+		System.out.println("languageEnglish: " + request.getParameter("languageEnglish"));
+		
+		System.out.println("languageEnglish: " + request.getParameter("languageEnglish"));
+		System.out.println("languageGerman: " + request.getParameter("languageGerman"));
+		System.out.println("languageFrench: " + request.getParameter("languageFrench"));
+		System.out.println("languageSpanish: " + request.getParameter("languageSpanish"));
+		
+		System.out.println("countryEngland: " + request.getParameter("countryEngland"));
+		System.out.println("countryGermany: " + request.getParameter("countryGermany"));
+		System.out.println("countryFrance: " + request.getParameter("countryFrance"));
+		System.out.println("countrySpain: " + request.getParameter("countrySpain"));
+
+		System.out.println("royaltyOpen: " + request.getParameter("royaltyOpen"));
+		System.out.println("royaltyRestricted: " + request.getParameter("royaltyRestricted"));
+		System.out.println("royaltyPermission: " + request.getParameter("royaltyPermission"));
 		
 		while(parameterNames.hasMoreElements()) {
 			
@@ -90,9 +118,9 @@ public class SearchController /*extends SimpleFormController */ {
 		return mav;
 	}
 	//ende richi versuch
-*/	
 	
-	private ModelAndView handleSearch() {
+	
+	private ModelAndView handleSearch() {//should we paste here the queryString search?
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("search");
 		mav.addObject("message", "Europeana Search Results");

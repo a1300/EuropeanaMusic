@@ -28,56 +28,47 @@
 		    <div id="single-field" style="float: left; padding-left:20px; width: 200px;">
 		    	    <p>Author:		</p>
 		    	    <input name="name" id="name" />
-		   		<br>
-		    	<br>
+		   		<br><br>
 		    </div>    
 		        
 		    <div id="single-field" style="float: left; width: 200px;">
 		    	    <p>Title:		</p>
 		    	    <input name="title" id="title" />
-		    	<br>
-				<br>
+		    	<br><br>
 			</div>
 			
-           	<div id="language" class="language" style="float: left; width: 400px;">
-			
+           	<div name="language" id="language" class="language" style="float: left; width: 400px;">
 					<p>Language:		</p>
-		        
-					<label class="checkbox-inline">
-  						<input type="checkbox" name="language" value="english" 	id="language"> English
+		        	<label class="checkbox-inline">
+  						<input type="checkbox" name="languageEnglish" value="languageEnglish" 	id="languageEnglish"> English
 					</label>
 					<label class="checkbox-inline">
-					  	<input type="checkbox" name="language" value="german" 	id="language"> German
+					  	<input type="checkbox" name="languageGerman" value="languageGerman" 	id="languageGerman"> German
 					</label>
 					<label class="checkbox-inline">
-	 	 				<input type="checkbox" name="language" value="french" 	id="language"> French
+	 	 				<input type="checkbox" name="languageFrench" value="languageFrench" 	id="languageFrench"> French
 					</label>
 					<label class="checkbox-inline">
-	 	 				<input type="checkbox" name="language" value="spanish"	id="language"> Spanish
+	 	 				<input type="checkbox" name="languageSpanish" value="languageSpanish"	id="languageSpanish"> Spanish
 					</label>
-								
  				<br>	
 			</div>
 			
 			<div id="country" class="country" style="float: left; width: 400px;">
-			
 					<p>Country:		</p>
-		        
 					<label class="checkbox-inline">
-  						<input type="checkbox" name="country" value="england" 	id="country"> England
+  						<input type="checkbox" name="countryEngland" value="countryEngland" 	id="countryEngland"> England
 					</label>
 					<label class="checkbox-inline">
-					  	<input type="checkbox" name="country" value="germany" 	id="country"> Germany
+					  	<input type="checkbox" name="countryGermany" value="countryGermany" 	id="countryGermany"> Germany
 					</label>
 					<label class="checkbox-inline">
-	 	 				<input type="checkbox" name="country" value="france" 	id="country"> France
+	 	 				<input type="checkbox" name="countryFrance" value="countryFrance" 	id="countryFrance"> France
 					</label>
 					<label class="checkbox-inline">
-	 	 				<input type="checkbox" name="country" value="spain"	id="country"> Spain
+	 	 				<input type="checkbox" name="countrySpain" value="countrySpain"	id="countrySpain"> Spain
 					</label>
-								
- 				<br>	
- 				<br>	
+ 				<br><br>	
 			</div>
 			
 			<div id="royalty" class="royalty" style="float: left; width: 600px;">
@@ -85,34 +76,35 @@
 					<p>Can i use it? :		</p>
 		        
 					<label class="checkbox-inline">
-  						<input type="checkbox" name="country" value="open" 			id="country">Free use
+  						<input type="checkbox" name="royaltyOpen" value="open" 			id="royaltyOpen">Free use
 					</label>
 					<label class="checkbox-inline">
-  						<input type="checkbox" name="country" value="restricted" 	id="country">Free use, giving credit to the author
+  						<input type="checkbox" name="royaltyRestricted" value="restricted" 	id="royaltyRestricted">Free use, giving credit to the author
 					</label>
 					<label class="checkbox-inline">
-  						<input type="checkbox" name="country" value="permission" 	id="country"> only with explicit permission
+  						<input type="checkbox" name="royaltyPermission" value="permission" 	id="royaltyPermission"> only with explicit permission
 					</label>
 			</div>
 		
 		
 		</div>
  				<br><br><br><br><br><br><br><br>
- 		<div id="send" style="float: left; padding-left:20px; width: 100px;">
- 			<input type="submit" value="send"/>
- 		</div>		
+ 			<div id="send" style="float: left; padding-left:20px; width: 100px;">
+ 				<input type="submit" value="send"/>
+ 			</div>		
  		<br>
  		
  		<hr style="padding-left:20px; height: 3px; border: 0; border-top: 1px solid #ccc;">
-		
+	
 	</form>
 	
 
 	
 	<!--  sehr gut ein jsp include machen, wo alles angezeigt wird --> 
+	
 	<div id="send" style="float: left; padding-left:20px; width: 100px;">
  	    <p>Results:</p>
-	    <div id="send" style="float: left; padding-left:20px; width: 100px;">
+	    <div id="send" style="float: left; padding-left:20px; width: 700px;">
  			${message}
  		</div>
  	</div>

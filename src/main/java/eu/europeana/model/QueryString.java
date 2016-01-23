@@ -50,7 +50,7 @@ if (queryString.contains("spanish")){
 }
 
 
-String totalQuery = queryStart + queryArtist + queryRoyalty ;
+String totalQuery = queryStart + queryArtist + queryRoyalty +filterString;
 	
 	this.queryString = totalQuery;
 	}
