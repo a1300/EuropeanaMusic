@@ -80,15 +80,15 @@
  				<br>	
 			</div>
 			
-			<div id="royalty" class="royalty" style="float: left; width: 400px;">
+			<div id="royalty" class="royalty" style="float: left; width: 600px;">
 			
 					<p>Can i use it? :		</p>
 		        
 					<label class="checkbox-inline">
-  						<input type="checkbox" name="country" value="open" 	id="country"> For free
+  						<input type="checkbox" name="country" value="open" 			id="country">Free use
 					</label>
 					<label class="checkbox-inline">
-  						<input type="checkbox" name="country" value="restricted" 	id="country"> For free giving credit to the author
+  						<input type="checkbox" name="country" value="restricted" 	id="country">Free use, giving credit to the author
 					</label>
 					<label class="checkbox-inline">
   						<input type="checkbox" name="country" value="permission" 	id="country"> only with explicit permission
@@ -101,22 +101,21 @@
  		<div id="send" style="float: left; padding-left:20px; width: 100px;">
  			<input type="submit" value="send"/>
  		</div>		
+ 		<br>
  		
- 		<hr>
+ 		<hr style="padding-left:20px; height: 3px; border: 0; border-top: 1px solid #ccc;">
 		
 	</form>
 	
 
 	
 	<!--  sehr gut ein jsp include machen, wo alles angezeigt wird --> 
-	<table>
-	    <tr>
-	        <td>Results:</td>
-	    </tr>
-	    <tr>
-	    	<td>${message}</td>
-	    </tr>
- 	</table>
+	<div id="send" style="float: left; padding-left:20px; width: 100px;">
+ 	    <p>Results:</p>
+	    <div id="send" style="float: left; padding-left:20px; width: 100px;">
+ 			${message}
+ 		</div>
+ 	</div>
  	
  	
 </body>

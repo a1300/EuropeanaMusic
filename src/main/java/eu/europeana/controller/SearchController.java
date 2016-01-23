@@ -26,7 +26,8 @@ public class SearchController /*extends SimpleFormController */ {
 	 * if something goes wrong with my experiments we still have the code that they made.
 	 * **********************************
 	 * **********************************
-	 * 
+	 * */
+
 	@RequestMapping(value="/search", method=RequestMethod.POST)
 	public ModelAndView handlePost(@RequestParam("name") String name, HttpServletRequest request) {
 		
@@ -54,7 +55,7 @@ public class SearchController /*extends SimpleFormController */ {
 		return mav;
 	}
 
-	*/
+/*
 	
 	//richi versuch
 	public ModelAndView handlePost(@RequestParam("name") String name,String title, HttpServletRequest request) {
@@ -89,7 +90,7 @@ public class SearchController /*extends SimpleFormController */ {
 		return mav;
 	}
 	//ende richi versuch
-	
+*/	
 	
 	private ModelAndView handleSearch() {
 		ModelAndView mav = new ModelAndView();
