@@ -23,9 +23,21 @@
 	
 	
 	<form method="post" action="${model.pageName}" id="register">
-	    
+	  <br>
+	  
+	  <div class="container1" style=" float: left;position: relative;left: 50%;">
+  			<div class="fixer-container" style="float: left;position: relative;left: -50%;">
+	  		  <div style="float: center;text-align:center; padding-left:20px; width: 500px;">
+	    			<p>In this site we could search for the songs of an specific artist.</p>
+	   				<p>We can filter them by language and country. </p>
+	   		  </div>
+	  	</div>
+	  </div>
+	  
+	  <br><br><br>
 	    <div>
 		    <div id="single-field" style="float: left; padding-left:20px; width: 200px;">
+		    	
 		    	    <p>Author:		</p>
 		    	    <input name="name" id="name" />
 		   		<br><br>
@@ -37,7 +49,7 @@
 		    	<br><br>
 			</div>
 			
-           	<div  class="language" style="float: left; width: 400px;">
+           	<div  class="language" style="float: left;padding-left:20px width: 350px;">
 					<p>Language:		</p>
 		        	<label class="checkbox-inline">
   						<input type="checkbox" name="languageEnglish" value="languageEnglish" 	id="languageEnglish"> English
@@ -70,28 +82,12 @@
 					</label>
  				<br><br>	
 			</div>
-			
-			<div id="royalty" class="royalty" style="float: left; width: 600px;">
-			
-					<p>Can i use it? :		</p>
-		        
-					<label class="checkbox-inline">
-  						<input type="checkbox" name="royaltyOpen" value="open" 			id="royaltyOpen">Free use
-					</label>
-					<label class="checkbox-inline">
-  						<input type="checkbox" name="royaltyRestricted" value="restricted" 	id="royaltyRestricted">Free use, giving credit to the author
-					</label>
-					<label class="checkbox-inline">
-  						<input type="checkbox" name="royaltyPermission" value="permission" 	id="royaltyPermission"> only with explicit permission
-					</label>
-			</div>
-		
-		
-		</div>
- 				<br><br><br><br><br><br><br><br>
- 			<div id="send" style="float: left; padding-left:20px; width: 100px;">
+
+				<br><br><br><br>			
+ 			<div id="send" style="float: left; padding-left:20px; width: 10px;">
  				<input type="submit" value="send"/>
  			</div>		
+ 		
  		<br>
  		
  		<hr style="padding-left:20px; height: 3px; border: 0; border-top: 1px solid #ccc;">

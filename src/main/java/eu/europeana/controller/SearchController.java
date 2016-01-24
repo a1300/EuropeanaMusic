@@ -138,6 +138,7 @@ public class SearchController /*extends SimpleFormController */ {
 			europeanaQuery.setTitle(title);
 			europeanaQuery.setCountry(countryGermany);
 			europeanaQuery.setLanguage(languageGerman);
+
 			
 	//	europeanaQuery.setQueryParams(queryString.getQueryString());
 		
@@ -160,7 +161,7 @@ public class SearchController /*extends SimpleFormController */ {
 	    int count = 0;
         for (EuropeanaApi2Item item : res.getAllItems()) {
         	
-        	objList.add(new SearchObj(item.getGuid(), item.getTitle()));
+        	objList.add(new SearchObj(item.getGuid(), item.getTitle(),item.getLanguage(),item.getCountry));
         	
 	    	 System.out.println();
 	         System.out.println("**** " + (count++ + 1));
