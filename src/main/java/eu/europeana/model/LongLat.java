@@ -2,19 +2,20 @@ package eu.europeana.model;
 
 public class LongLat {
 
-	private double longitude;
 	private double latitude;
+	private double longitude;
 	private double count;
 	
 	/**
 	 * 
-	 * @param longitude
 	 * @param latitude
+	 * @param longitude
 	 * @param count
 	 */
-	public LongLat(double longitude, double latitude, double count) {
-		this.longitude = longitude;
+	public LongLat(double latitude, double longitude, double count) {
+		
 		this.latitude = latitude;
+		this.longitude = longitude;
 		this.count = count;
 	}
 	
