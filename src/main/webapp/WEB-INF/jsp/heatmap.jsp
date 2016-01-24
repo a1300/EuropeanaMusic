@@ -20,7 +20,7 @@
 	<%@ include file="/WEB-INF/jsp/order/scripts.jsp" %>
 
 	<script src="js/parallax.js"></script>
-	<div class="parallax-window" data-parallax="scroll" data-image-src="img/sm_dig10622.jpg"></div>
+	<div class="parallax-window" data-parallax="scroll" data-image-src="img/heatmapPic.jpg"></div>
 	
 	<!-- navbar -->
 	<%@ include file="/WEB-INF/jsp/order/navbar.jsp" %>
