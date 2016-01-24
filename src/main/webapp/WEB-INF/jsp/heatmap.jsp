@@ -25,8 +25,22 @@
 	<!-- navbar -->
 	<%@ include file="/WEB-INF/jsp/order/navbar.jsp" %>
 
-	<!-- just testcontent -->
-	<%@ include file="/WEB-INF/jsp/order/testContent.jsp" %>
+
+	<!-- import -->
+	<!-- For Leaflet Library -->
+	<link rel="stylesheet" href="js/leaflet-library/leaflet.css" />
+	<script src="js/leaflet-library/leaflet.js"></script>
+
+	<!-- MapQuest online API -->
+	<script src="http://www.mapquestapi.com/sdk/leaflet/v2.s/mq-map.js?key=GJ4oEUANXFZA0H8iCyzUzCVA1I3yAzPo"></script>
+
+	<!-- Heatmap Library -->
+	<script src="js/heatmap.js"></script>
+
+	<!-- LeafPad-Heatmap Library, this should be right under heatmap.js -->
+	<script src="js/leaflet-heatmap.js"></script>
+	
+	
 	
 	
 </body>
