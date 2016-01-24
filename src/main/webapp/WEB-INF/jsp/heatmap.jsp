@@ -29,9 +29,43 @@
 	<!-- heatmap -->
 	<%@ include file="/WEB-INF/jsp/order/heatmapDependency.jsp" %>
 	
+	
+	
+	<!-- start reading data into javascript variable from java bean -->
+	<script>
+		var testVal = {
+            max: 8,
+            data: [ { lat: 50.6408, lng: 10.7728, count: 3 } ]
+		};
+	</script>
+	<c:if test="${not empty lists}">
+		<ul>
+			<c:forEach var="listValue" items="${lists}">
+				<script>
+					testVal.data.push({lat: "${listValue.latitude}",
+										  lng: "${listValue.longitude}",
+										  count: "${listValue.count}"}
+										);
+					//console.log(testVal.data);
+					
+				</script>
+				<br/>
+			</c:forEach>
+		</ul>
+	</c:if>
+	<!-- read data from bean -->
+	
+	
+	
+	
+	
 	<!-- drawing data into heatmap, must be after heatmapDependency.jsp import -->
 	<script>
     
+		//test
+		console.log("testVal:");
+		console.log(testVal);
+	
         var testData = {
             max: 8, //was soll das?
             data: [ { lat: 24.6408, lng: 46.7728, count: 3 },
@@ -65,12 +99,13 @@
 
 	    map = L.map('map', {
 	        layers: [mapLayer, heatmapLayer],
-		    center: [ 40.731701, -73.993411 ],
-		    zoom: 2
+		    center: [ 52.731701, 15.993411 ],
+		    zoom: 4
 	    });
 
-	    heatmapLayer.setData(testData);
-
+	    //heatmapLayer.setData(testData); //before
+		heatmapLayer.setData(testVal);
+	    
 	    L.control.layers({
 		    'Dark': mapLayer,
 		    'Map': MQ.mapLayer(),
@@ -82,8 +117,6 @@
 
 	</script>
 	
-	
-	
-	
+
 </body>
 </html>
