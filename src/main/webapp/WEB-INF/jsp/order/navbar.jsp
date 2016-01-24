@@ -9,7 +9,7 @@
 		<span class="icon-bar"></span>
 		<span class="icon-bar"></span>
 	      </button>
-	      <a class="navbar-brand" href="#">
+	      <a class="navbar-brand" href="index.html">
 		  	<img alt="Brand" src="img/logoKlein.jpeg" height="20" width="16.2">
 		  </a>
 	    </div>
