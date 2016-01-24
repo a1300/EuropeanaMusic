@@ -12,7 +12,6 @@
 	<title>Home - Europeana Music Channel</title>
 	
 	<%@ include file="/WEB-INF/jsp/order/stylesheets.jsp" %>
-	
 	<%@ include file="/WEB-INF/jsp/order/meta.jsp" %>
 	
 </head>
