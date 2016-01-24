@@ -14,8 +14,10 @@ public class HeatmapController {
 	@RequestMapping(value="/heatmap")
 	public ModelAndView callHeatmap() {
 		
-		ModelAndView mav = new ModelAndView("heatmap");
 		
+		
+		
+		ModelAndView mav = new ModelAndView("heatmap");
 		List<LongLat> list = new ArrayList<LongLat>();
 		list.add(new LongLat(52.5, 13.4, 1)); //test values:
 		list.add(new LongLat(52.34, 13.5, 1));
@@ -23,8 +25,6 @@ public class HeatmapController {
 		list.add(new LongLat(52.15, 13.7, 1));
 		list.add(new LongLat(52.34, 13.8, 1));
 		list.add(new LongLat(52.1, 13.9, 1));
-		
-		
 		mav.addObject("lists", list);
 		
 		return mav;

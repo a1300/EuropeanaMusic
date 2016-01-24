@@ -30,20 +30,17 @@
 	<%@ include file="/WEB-INF/jsp/order/heatmapDependency.jsp" %>
 	
 	
-	<!-- test START -->
+	
+	<!-- start reading data into javascript variable from java bean -->
 	<script>
 		var testVal = {
-            max: 8, //was soll das?
-            data: [ { lat: 50.6408, lng: 10.7728, count: 3 } ] 
+            max: 8,
+            data: [ { lat: 50.6408, lng: 10.7728, count: 3 } ]
 		};
 	</script>
 	<c:if test="${not empty lists}">
-
 		<ul>
 			<c:forEach var="listValue" items="${lists}">
-				<li>${listValue.longitude}</li>
-				<li>${listValue.latitude}</li>
-				<li>${listValue.count}</li>
 				<script>
 					testVal.data.push({lat: "${listValue.latitude}",
 										  lng: "${listValue.longitude}",
@@ -56,7 +53,7 @@
 			</c:forEach>
 		</ul>
 	</c:if>
-	<!-- test END -->
+	<!-- read data from bean -->
 	
 	
 	
@@ -120,11 +117,6 @@
 
 	</script>
 	
-	
-	
 
-	
-	
-	
 </body>
 </html>
