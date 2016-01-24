@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Enumeration;
+import java.util.List;
 import java.util.Map;
 
 
@@ -153,19 +154,14 @@ public class SearchController /*extends SimpleFormController */ {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-		
-       
-//        System.out.println("Query: " + europeanaQuery.getSearchTerms());
-//        try {
-//			System.out.println("Query url: " + europeanaQuery.getQueryUrl(europeanaClient));
-//		} catch (UnsupportedEncodingException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//       
+	 
+		List<SearchObj> objList = new ArrayList<SearchObj>();
         
 	    int count = 0;
         for (EuropeanaApi2Item item : res.getAllItems()) {
+        	
+        	objList.add(new SearchObj(item.getGuid(), item.getTitle()));
+        	
 	    	 System.out.println();
 	         System.out.println("**** " + (count++ + 1));
 	         System.out.println("Title: " + item.getTitle());
@@ -176,47 +172,12 @@ public class SearchController /*extends SimpleFormController */ {
 	         System.out.println("Data provider: "
 	                 + item.getDataProvider());
 		}
-        
-        
-		/*
-		QueryString queryString = new QueryString(list);
-				
-		EuropeanaApi2Client client = new EuropeanaApi2Client();
+
+		ModelAndView mav = new ModelAndView("search"); //search.jsp
+		mav.addObject("lists", objList);
 		
-//		EuropeanaConnection connect = new EuropeanaConnection();
-//		
-//		System.out.println("uri de connect "+ connect.getEuropeanaUri());
-//		System.out.println("key de connect " + connect.getApiKey());
-//		System.out.println("class de connect " +connect.getClass());
 		
-		Api2Query query = new Api2Query();
-//		query.setCreator(name);
-//		query.setTitle(title);// (queryString.getQueryString());
-//		query.setLanguage(languageEnglish);
-//		query.setLanguage(countryEngland);
-//		query.setProfile("rich");
-//		
-		final String portalSearchUrl = queryString.getQueryString();
-		System.out.println("portal search hat -> "+portalSearchUrl);
-		EuropeanaApi2Results results =new EuropeanaApi2Results();
-		try {
-			results = client.searchApi2(portalSearchUrl, 10, 1);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (EuropeanaApiProblem e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}*/
 		
-		/* rints all parameterNames
-		while(parameterNames.hasMoreElements()) {
-			
-			System.out.println("parameterName " + parameterNames.nextElement().toString());
-		} */
-//		System.out.println(results);
-        
-		ModelAndView mav = handleSearch();
 		
 		return mav;
 	}

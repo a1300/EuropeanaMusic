@@ -98,17 +98,19 @@
 	
 	</form>
 	
-
 	
-	<!--  sehr gut ein jsp include machen, wo alles angezeigt wird --> 
-	
-	<div id="send" style="float: left; padding-left:20px; width: 100px;">
- 	    <p>Results:</p>
-	    <div id="send" style="float: left; padding-left:20px; width: 700px;">
-	 		${message}
-	 		${titel}
- 		</div>
- 	</div>
+		
+	<c:if test="${not empty lists}">
+			<ul>
+				<c:forEach var="listValue" items="${lists}">
+						<p>${listValue.name}</p>
+						<c:forEach var="sub" items="${listValue.titel}">
+							<p>${sub}</p>
+						</c:forEach>
+					<br/>
+				</c:forEach>
+			</ul>
+		</c:if>
  	
  	
 </body>
