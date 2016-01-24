@@ -90,7 +90,7 @@
 		</div>
  				<br><br><br><br><br><br><br><br>
  			<div id="send" style="float: left; padding-left:20px; width: 100px;">
- 				<input type="submit" value="send"/>
+ 				<input class="btn btn-primary btn-lg" type="submit" value="send"/>
  			</div>		
  		<br>
  		
@@ -98,9 +98,8 @@
 	
 	</form>
 	
-	
 		
-	<c:if test="${not empty lists}">
+		<c:if test="${not empty lists}">
 			<ul>
 				<c:forEach var="listValue" items="${lists}">
 						<p>${listValue.name}</p>
@@ -111,7 +110,7 @@
 				</c:forEach>
 			</ul>
 		</c:if>
- 	
+		
  	
 </body>
 </html>
