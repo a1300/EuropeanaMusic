@@ -8,7 +8,7 @@
 <html>
 <head>
 
-	<title>Insert title here</title>
+	<title>Heatmap - Europeana Music Channel</title>
 	
 	<%@ include file="/WEB-INF/jsp/order/meta.jsp" %>
 	<%@ include file="/WEB-INF/jsp/order/stylesheets.jsp" %>
