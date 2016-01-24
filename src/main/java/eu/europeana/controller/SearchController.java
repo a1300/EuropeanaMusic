@@ -1,8 +1,23 @@
 package eu.europeana.controller;
 
+
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.Map;
+
+
+
+import eu.europeana.api.client.model.EuropeanaApi2Results;
+import eu.europeana.api.client.model.search.EuropeanaApi2Item;
+import eu.europeana.api.client.*;
+import eu.europeana.api.client.EuropeanaApi2Client;
+import eu.europeana.api.client.connection.EuropeanaConnection;
+import eu.europeana.api.client.exception.EuropeanaApiProblem;
+import eu.europeana.api.client.model.EuropeanaApi2Results;
+import eu.europeana.api.client.search.query.Api2Query;
+import eu.europeana.api.client.search.query.EuropeanaComplexQuery;
 import eu.europeana.model.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -77,9 +92,9 @@ public class SearchController /*extends SimpleFormController */ {
 			@RequestParam(value="royaltyPermission", required = false) String royaltyPermission, 
 			HttpServletRequest request) {
 		
-		System.out.println("name: " + request.getParameter("name"));
+//		System.out.println("name: " + request.getParameter("name"));
 		Enumeration parameterNames = request.getParameterNames();
-		
+		/*
 		System.out.println("title: " + request.getParameter("title"));
 		
 		System.out.println("languageEnglish: " 	+ request.getParameter("languageEnglish"));
@@ -95,6 +110,7 @@ public class SearchController /*extends SimpleFormController */ {
 		System.out.println("royaltyOpen: " + request.getParameter("royaltyOpen"));
 		System.out.println("royaltyRestricted: " + request.getParameter("royaltyRestricted"));
 		System.out.println("royaltyPermission: " + request.getParameter("royaltyPermission"));
+		*/
 		
 		ArrayList<String> list = new ArrayList<String>();
 		list.add(request.getParameter("name"));
@@ -111,14 +127,95 @@ public class SearchController /*extends SimpleFormController */ {
 		list.add(request.getParameter("royaltyRestricted"));
 		list.add(request.getParameter("royaltyPermission"));
 		
+		
 		QueryString queryString = new QueryString(list);
+
+		 //create the query object
+		Api2Query europeanaQuery = new Api2Query();
+			europeanaQuery.setCreator(name);
+     		europeanaQuery.setType(EuropeanaComplexQuery.TYPE.SOUND);
+			europeanaQuery.setTitle(title);
+			europeanaQuery.setCountry(countryGermany);
+			europeanaQuery.setLanguage(languageGerman);
+			
+	//	europeanaQuery.setQueryParams(queryString.getQueryString());
+		
+        //perform search												queryString bla se reemplaza por europeanaQuery
+		EuropeanaApi2Client europeanaClient = new EuropeanaApi2Client();
+       
+		EuropeanaApi2Results res = new EuropeanaApi2Results();
+		try {
+			res = europeanaClient.searchApi2(europeanaQuery,-1,1);
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (EuropeanaApiProblem e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+       
+//        System.out.println("Query: " + europeanaQuery.getSearchTerms());
+//        try {
+//			System.out.println("Query url: " + europeanaQuery.getQueryUrl(europeanaClient));
+//		} catch (UnsupportedEncodingException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//       
+        
+	    int count = 0;
+        for (EuropeanaApi2Item item : res.getAllItems()) {
+	    	 System.out.println();
+	         System.out.println("**** " + (count++ + 1));
+	         System.out.println("Title: " + item.getTitle());
+	         System.out.println("Europeana URL: " + item.getObjectURL());
+	         System.out.println("Type: " + item.getType());
+	         System.out.println("Creator(s): " + item.getDcCreator());
+	         System.out.println("Thumbnail(s): " + item.getEdmPreview());
+	         System.out.println("Data provider: "
+	                 + item.getDataProvider());
+		}
+        
+        
+		/*
+		QueryString queryString = new QueryString(list);
+				
+		EuropeanaApi2Client client = new EuropeanaApi2Client();
+		
+//		EuropeanaConnection connect = new EuropeanaConnection();
+//		
+//		System.out.println("uri de connect "+ connect.getEuropeanaUri());
+//		System.out.println("key de connect " + connect.getApiKey());
+//		System.out.println("class de connect " +connect.getClass());
+		
+		Api2Query query = new Api2Query();
+//		query.setCreator(name);
+//		query.setTitle(title);// (queryString.getQueryString());
+//		query.setLanguage(languageEnglish);
+//		query.setLanguage(countryEngland);
+//		query.setProfile("rich");
+//		
+		final String portalSearchUrl = queryString.getQueryString();
+		System.out.println("portal search hat -> "+portalSearchUrl);
+		EuropeanaApi2Results results =new EuropeanaApi2Results();
+		try {
+			results = client.searchApi2(portalSearchUrl, 10, 1);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (EuropeanaApiProblem e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
 		
 		/* rints all parameterNames
 		while(parameterNames.hasMoreElements()) {
 			
 			System.out.println("parameterName " + parameterNames.nextElement().toString());
 		} */
-		
+//		System.out.println(results);
+        
 		ModelAndView mav = handleSearch();
 		
 		return mav;
