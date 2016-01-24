@@ -113,10 +113,11 @@ public class SearchController /*extends SimpleFormController */ {
 		
 		QueryString queryString = new QueryString(list);
 		
+		/* rints all parameterNames
 		while(parameterNames.hasMoreElements()) {
 			
 			System.out.println("parameterName " + parameterNames.nextElement().toString());
-		}
+		} */
 		
 		ModelAndView mav = handleSearch();
 		
