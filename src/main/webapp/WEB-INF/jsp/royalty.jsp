@@ -65,35 +65,74 @@
 			</div>
 		
  		
- 				<br><br><br><br>
+ 			<br/>
  			<div id="send" style="float: left; padding-left:20px; width: 100px;">
- 				<input class="btn btn-lg btn-primary" type="submit" value="send"/>
- 			</div>		
- 		
- 		<br>
- 		<br>
- 		<br>
- 		
+ 				<input class="btn btn-lg btn-success" type="submit" value="send"/>
+ 			</div>
+ 			<br/>
+ 			
  		<hr style="padding-left:20px; height: 3px; border: 0; border-top: 1px solid #ccc;">
 	
 	</form>
 	
+	<br/>
+	<br/>
+	<br/>
+	<br/>
 	
-	<!--  here are coming the data -->
+	<!--  here comes the data -->
 	<c:if test="${not empty lists}">
 		<ul>
 			<c:forEach var="listValue" items="${lists}">
 				<div class="col-lg-6 col-sm-12 well well-sm text-left">
-					<p>${listValue.title}</p>
-					<p>${listValue.shownBy}</p>
-					<p>${listValue.dataProvider}</p>
-					<p>${listValue.rights}</p>
-					<p> </p>
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<c:forEach var="titleValue" items="${listValue.title}">
+								<h5><b>${titleValue}</b></h5>
+							</c:forEach>
+						</div>
+	 					<div class="panel-body panel-info">
+	 						
+	 						<c:choose>
+	 							<c:when test="${not empty listValue.shownBy}">
+									<p><b>shownBy:</b> ${listValue.shownBy}</p>
+								</c:when>
+								<c:otherwise>
+									<p><b>ShownBy: </b><span class="label label-default">...</span></p>
+								</c:otherwise>
+							</c:choose>
+							
+							
+							<c:choose>
+	 							<c:when test="${not empty listValue.dataProvider}">
+									<c:forEach var="dataPVal" items="${listValue.dataProvider}">
+										<span class="form-group">
+											<b>Data Provider: </b>
+											<div class="btn btn-info btn-sm inline">
+												<a href="${dataPVal}">Link</a>
+											</div>	
+										</span>
+									</c:forEach>
+								</c:when>
+								<c:otherwise>
+									<p><b>DataProvider: </b><span class="label label-default">...</span></p>
+								</c:otherwise>
+							</c:choose>
+							<c:choose>
+	 							<c:when test="${not empty listValue.rights}">
+									<p><b>Rights:</b> ${listValue.rights}</p>
+								</c:when>
+								<c:otherwise>
+									<p><b>Rights: </b><span class="label label-default">...</span></p>
+								</c:otherwise>
+							</c:choose>					
+						</div>
+					</div>
 				</div>
 			</c:forEach>
 		</ul>
 	</c:if>
-
+	<!-- data end -->
 
 
 </body>
