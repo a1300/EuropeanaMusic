@@ -16,7 +16,7 @@
 	<%@ include file="/WEB-INF/jsp/order/scripts.jsp" %>
 
 	
-	<div class="parallax-window" data-parallax="scroll" data-image-src="img/nosColonies.jpeg"></div>	
+	<div class="parallax-window" data-parallax="scroll" data-image-src="img/art4.jpg"></div>	
 	
 	<!-- navbar -->
 	<%@ include file="/WEB-INF/jsp/order/navbar.jsp" %>
