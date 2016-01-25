@@ -142,8 +142,7 @@ public class SearchController /*extends SimpleFormController */ {
 			
 	//	europeanaQuery.setQueryParams(queryString.getQueryString());
 		
-        //perform search												queryString bla se reemplaza por europeanaQuery
-		EuropeanaApi2Client europeanaClient = new EuropeanaApi2Client();
+       EuropeanaApi2Client europeanaClient = new EuropeanaApi2Client();
        
 		EuropeanaApi2Results res = new EuropeanaApi2Results();
 		try {
@@ -157,11 +156,12 @@ public class SearchController /*extends SimpleFormController */ {
 		}
 	 
 		List<SearchObj> objList = new ArrayList<SearchObj>();
-        
+       
+		
 	    int count = 0;
         for (EuropeanaApi2Item item : res.getAllItems()) {
         	
-        	objList.add(new SearchObj(item.getGuid(), item.getTitle(),item.getLanguage(),item.getCountry));
+        	objList.add(new SearchObj(item.getGuid(), item.getTitle(), item.getLanguage(), item.getC ));
         	
 	    	 System.out.println();
 	         System.out.println("**** " + (count++ + 1));

@@ -37,7 +37,6 @@
 	  <br><br><br>
 	    <div>
 		    <div id="single-field" style="float: left; padding-left:20px; width: 200px;">
-		    	
 		    	    <p>Author:		</p>
 		    	    <input name="name" id="name" />
 		   		<br><br>
@@ -49,36 +48,36 @@
 		    	<br><br>
 			</div>
 			
-           	<div  class="language" style="float: left;padding-left:20px width: 350px;">
+           	<div  class="radio-inline" data-toggle="buttons-radio" style="float: left;padding-left:20px width: 350px;">
 					<p>Language:		</p>
-		        	<label class="checkbox-inline">
-  						<input type="checkbox" name="languageEnglish" value="languageEnglish" 	id="languageEnglish"> English
+		        	<label class="radio-inline">
+  						<input type="radio" name="inlineRadioOptions" value="languageEnglish" 	id="languageEnglish"> English
 					</label>
-					<label class="checkbox-inline">
-					  	<input type="checkbox" name="languageGerman" value="languageGerman" 	id="languageGerman"> German
+					<label class="radio-inline">
+					  	<input type="radio" name="inlineRadioOptions" value="languageGerman" 	id="languageGerman"> German
 					</label>
-					<label class="checkbox-inline">
-	 	 				<input type="checkbox" name="languageFrench" value="languageFrench" 	id="languageFrench"> French
+					<label class="radio-inline">
+	 	 				<input type="radio" name="inlineRadioOptions" value="languageFrench" 	id="languageFrench"> French
 					</label>
-					<label class="checkbox-inline">
-	 	 				<input type="checkbox" name="languageSpanish" value="languageSpanish"	id="languageSpanish"> Spanish
+					<label class="radio-inline">
+	 	 				<input type="radio" name="inlineRadioOptions" value="languageSpanish"	id="languageSpanish"> Spanish
 					</label>
  				<br>	
 			</div>
 			
-			<div id="country" class="country" style="float: left; width: 400px;">
+			<div id="country" class="country" style="float: left;padding-left:20px; width: 400px;">
 					<p>Country:		</p>
-					<label class="checkbox-inline">
-  						<input type="checkbox" name="countryEngland" value="countryEngland" 	id="countryEngland"> England
+					<label class="radio-inline">
+  						<input type="radio" name="inlineRadioOptions" value="countryEngland" 	id="countryEngland"> England
 					</label>
-					<label class="checkbox-inline">
-					  	<input type="checkbox" name="countryGermany" value="countryGermany" 	id="countryGermany"> Germany
+					<label class="radio-inline">
+					  	<input type="radio" name="inlineRadioOptions" value="countryGermany" 	id="countryGermany"> Germany
 					</label>
-					<label class="checkbox-inline">
-	 	 				<input type="checkbox" name="countryFrance" value="countryFrance" 	id="countryFrance"> France
+					<label class="radio-inline">
+	 	 				<input type="radio" name="inlineRadioOptions" value="countryFrance" 	id="countryFrance"> France
 					</label>
-					<label class="checkbox-inline">
-	 	 				<input type="checkbox" name="countrySpain" value="countrySpain"	id="countrySpain"> Spain
+					<label class="radio-inline">
+	 	 				<input type="radio" name="inlineRadioOptions" value="countrySpain"	id="countrySpain"> Spain
 					</label>
  				<br><br>	
 			</div>

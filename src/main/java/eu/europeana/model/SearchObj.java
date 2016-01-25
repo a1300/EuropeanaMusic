@@ -4,30 +4,30 @@ import java.util.List;
 
 public class SearchObj {
 
-	private List<String> Name;
-	private List<String> Titel;
+	private List<String> name;
+	private List<String> titel;
 	private List<String> language;
 	private List<String> country;
 	
 	public SearchObj(List<String> name, List<String> titel,List<String> language,List<String> country) {
 		
-		this.Name = name;
-		this.Titel = titel;
+		this.name = name;
+		this.titel = titel;
 		this.language = language;
 		this.country = country;
 	}
 	
 	public List<String> getName() {
-		return Name;
+		return name;
 	}
 	public void setName(List<String> name) {
-		Name = name;
+		this.name = name;
 	}
 	public List<String> getTitel() {
-		return Titel;
+		return titel;
 	}
 	public void setTitel(List<String> titel) {
-		Titel = titel;
+		this.titel = titel;
 	}
 
 	public List<String> getLanguage() {
