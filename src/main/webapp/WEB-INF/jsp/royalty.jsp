@@ -96,11 +96,26 @@
 									<p><b>shownBy:</b> ${listValue.shownBy}</p>
 								</c:when>
 								<c:otherwise>
-									<p><b>shownBy: </b><span class="label label-default">...</span></p>
+									<p><b>ShownBy: </b><span class="label label-default">...</span></p>
 								</c:otherwise>
 							</c:choose>
-							<p><b>dataProvider:</b> ${listValue.dataProvider}</p>
-							<p><b>Rights:</b> ${listValue.rights}</p>
+							<c:choose>
+	 							<c:when test="${not empty listValue.dataProvider}">
+									<p><b>DataProvider:</b> ${listValue.dataProvider}</p>
+								</c:when>
+								<c:otherwise>
+									<p><b>DataProvider: </b><span class="label label-default">...</span></p>
+								</c:otherwise>
+							</c:choose>
+							<c:choose>
+	 							<c:when test="${not empty listValue.rights}">
+									<p><b>Rights:</b> ${listValue.rights}</p>
+								</c:when>
+								<c:otherwise>
+									<p><b>Rights: </b><span class="label label-default">...</span></p>
+								</c:otherwise>
+							</c:choose>
+							
 						</div>
 					</div>
 				</div>
