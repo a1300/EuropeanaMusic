@@ -27,7 +27,7 @@
 
 <div class="panel panel-info">
   		<div class="panel-heading">
-  			  <h3 class="panel-title"><b>HEATMAP</b></h3>
+  			  <a href="heatmap.html"> <h3 class="panel-title"><b>HEATMAP</b></h3></a>
   		</div>
   		<div class="panel-body panel-info text-center">
   			<b>Here you will find the function of Visualize regional appearance of folklore music<br /> 
@@ -37,7 +37,7 @@
 	</div>
 	<div class="panel panel-warning">
   		<div class="panel-heading">
-  			  <h3 class="panel-title"> <b> SEARCH </b></h3>
+  			 <a href= "search.html"> <h3 class="panel-title"> <b> SEARCH </b></h3></a>
   		</div>
   		<div class="panel-body panel-info text-center">  		
   		<b>	In search page you will find the search filter which offers you search functionalities of our web application in different ways.<br/>
@@ -47,9 +47,9 @@
 	
 	</div>
 	
-	<div class="panel panel-primary">
+	<div class="panel panel-success">
   		<div class="panel-heading">
-  			  <h3 class="panel-title"><b>RoyaltyFree</b></h3>
+  			  <a href="royaltyfree.html"> <h3 class="panel-title"> <b> RoyaltyFree </b></h3></a>
   		</div>
   		<div class="panel-body panel-info text-center">
   			<b>
@@ -58,7 +58,7 @@
 	</div>
 	<div class="panel panel-info">
   		<div class="panel-heading">
-  			  <h3 class="panel-title"><b>About</b></h3>
+  			  <a href="about.html"><h3 class="panel-title"><b>About</b></h3></a>
   		</div>
   		<div class="panel-body panel-info text-center">
   			<b> Here you will all details about our project like Feature, Functions, API Overview, Summary amd Activities per person.</b>	
