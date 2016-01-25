@@ -77,6 +77,20 @@
  		<hr style="padding-left:20px; height: 3px; border: 0; border-top: 1px solid #ccc;">
 	
 	</form>
+	
+	
+	<!--  here are coming the data -->
+	<c:if test="${not empty lists}">
+		<ul>
+			<c:forEach var="listValue" items="${lists}">
+				<div class="col-lg-6 col-sm-12 well well-sm text-left">
+					<p>${listValue.title}</p>
+					<p>${listValue.shownBy}</p>
+					<p> </p>
+				</div>
+			</c:forEach>
+		</ul>
+	</c:if>
 
 
 

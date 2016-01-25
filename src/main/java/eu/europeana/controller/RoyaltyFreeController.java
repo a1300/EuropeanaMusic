@@ -66,7 +66,7 @@ public class RoyaltyFreeController {
 			EuropeanaApi2Client europeanaClient = new EuropeanaApi2Client();
 			EuropeanaApi2Results results = new EuropeanaApi2Results();
 			try{
-				results = europeanaClient.searchApi2(europeanaQuery, 10, 1);
+				results = europeanaClient.searchApi2(europeanaQuery, 15, 1);
 			} catch(IOException e) {
 				e.printStackTrace();
 			} catch(EuropeanaApiProblem e1) {
@@ -81,6 +81,8 @@ public class RoyaltyFreeController {
 			
 				
 			ModelAndView mav = new ModelAndView("royalty");
+			mav.addObject("lists", royaltyList);
+			
 			
 			return mav;
 		}
