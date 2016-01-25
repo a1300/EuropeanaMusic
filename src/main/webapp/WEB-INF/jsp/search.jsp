@@ -111,9 +111,8 @@
  			<div id="send" style="float: left; padding-left:20px; width: 10px;">
  				<input class="btn btn-lg btn-success" type="submit" value="send"/>
  			</div>		
- 		<br/>
- 		<br/>
- 		<br/>
+ 		<br>
+ 		<br>
  		
  		<hr style="padding-left:20px; height: 3px; border: 0; border-top: 1px solid #ccc;">
 	
