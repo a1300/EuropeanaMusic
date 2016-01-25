@@ -31,41 +31,36 @@
   		</div>
   		<div class="panel-body panel-info text-center">
   			<b>Here you will find the function of Visualize regional appearance of folklore music<br /> 
-  			This function is taken from EPIC 3!
-  			</b>	
+  			This function is taken from EPIC 3!</b>	
  		 </div>
-	</div>
+ 		 </div>
+
 	<div class="panel panel-warning">
   		<div class="panel-heading">
   			 <a href= "search.html"> <h3 class="panel-title"> <b> SEARCH </b></h3></a>
   		</div>
   		<div class="panel-body panel-info text-center">  		
   		<b>	In search page you will find the search filter which offers you search functionalities of our web application in different ways.<br/>
-		These search functions were taken from EPIC 1!
-		</b>
+		These search functions were taken from EPIC 1!</b>
  		 </div>
-	
-	</div>
-	
+ 		 </div>
+
 	<div class="panel panel-success">
   		<div class="panel-heading">
   			  <a href="royaltyfree.html"> <h3 class="panel-title"> <b> RoyaltyFree </b></h3></a>
   		</div>
   		<div class="panel-body panel-info text-center">
   			<b>
-  			This page provides very special functions in order to see different rights of music. 
-  			</b>
+  			This page provides very special functions in order to see different rights of music. </b>
+	</div>
 	</div>
 	<div class="panel panel-info">
   		<div class="panel-heading">
-  			  <a href="about.html"><h3 class="panel-title"><b>About</b></h3></a>
+  			  <a href="about.html"> <h3 class="panel-title"> <b>About</b></h3></a>
   		</div>
   		<div class="panel-body panel-info text-center">
   			<b> Here you will all details about our project like Feature, Functions, API Overview, Summary amd Activities per person.</b>	
  		 </div>
 	</div>
-	</div>
-
-	
 </body>
 </html>
