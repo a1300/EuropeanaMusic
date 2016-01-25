@@ -29,21 +29,30 @@
 	
 	     	   <div style="float: center;text-align:center; padding-left:20px;">
 		    	    <br>
-		    	    	<p>In this site you will get information about the rights of the songs in europeana and
-		    	     	 you could hear a preview of the song (if the rights allow it).	</p>
+		    	    	<div class="well well-sm">
+		    	    		
+		    	    	In this site you will get information about the rights of the songs in europeana and
+		    	     	 you could hear a preview of the song (if the rights allow it).
 		    	    	<p>The probability to get a preview of a song is higher by selecting "free use"</p>
+		    	    	</div>
 		 </div></div></div>
 		 
-		   <br><br><br><br><br>  
+		   <br><br><br><br><br> 
 		
 		    <div id="single-field" style="float: left;padding-left:20px; width: 350px;">
 		   		    <p>Title:		</p>
 		    	    <input name="title" id="title" />
 			</div>
 			
-           	<div id="royalty" class="royalty" style="float: right; padding-right:20px; ">
+           	<div id="royalty" class="royalty well well-sm" style="float: right; padding-right:20px; ">
 			
-					<p>Can i use it? :		</p>
+					<p>
+						<h4>
+							<span class="label label-info">
+								Can i use it? :
+							</span>
+						</h4>
+					</p>
 		        	<label class="radio-inline" style="width:250;">
   						<input type="radio" name="inlineRadioOptions" value="open" 				id="royaltyOpen">Free use
 					</label>
@@ -58,9 +67,11 @@
  		
  				<br><br><br><br>
  			<div id="send" style="float: left; padding-left:20px; width: 100px;">
- 				<input type="submit" value="send"/>
+ 				<input class="btn btn-lg btn-primary" type="submit" value="send"/>
  			</div>		
  		
+ 		<br>
+ 		<br>
  		<br>
  		
  		<hr style="padding-left:20px; height: 3px; border: 0; border-top: 1px solid #ccc;">
