@@ -96,6 +96,7 @@ public class SearchController /*extends SimpleFormController */ {
 		europeanaQuery.setCreator(name);
  		europeanaQuery.setType(EuropeanaComplexQuery.TYPE.SOUND);
 		europeanaQuery.setTitle(title);
+		europeanaQuery.setProfile("rich");
 		
 		
         EuropeanaApi2Client europeanaClient = new EuropeanaApi2Client();
@@ -113,7 +114,7 @@ public class SearchController /*extends SimpleFormController */ {
 	    int count = 0;
         for (EuropeanaApi2Item item : res.getAllItems()) {
         	
-        	jspList.add(new SearchObj(item.getDcCreator(), item.getTitle(), item.getEuropeanaCollectionName(), item.getEdmIsShownBy(), item.getObjectURL() ) );
+        	jspList.add(new SearchObj(item.getDcCreator(), item.getTitle(), item.getEuropeanaCollectionName(), item.getEdmIsShownBy(), item.getObjectURL(), item.getEdmPreview() ) );
         		
         	 System.out.println();
 	         System.out.println("**** " + (count++ + 1));

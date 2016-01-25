@@ -9,14 +9,17 @@ public class SearchObj {
 	private List<String> collection;
 	private List<String> shownBy;
 	private String url;
+	private List<String> thumbnail;
 	
-	public SearchObj(List<String> name, List<String> title, List<String> collection, List<String> shownBy, String url) {
+	public SearchObj(List<String> name, List<String> title, List<String> collection, 
+			List<String> shownBy, String url, List<String> thumbnail) {
 		
 		this.setName(name);
 		this.setTitle(title);
 		this.setCollection(collection);
 		this.setShownBy(shownBy);
 		this.url = url;
+		this.setThumbnail(thumbnail);
 	}
 
 	public List<String> getName() {
@@ -58,6 +61,14 @@ public class SearchObj {
 	public void setUrl(String url) {
 		this.url = url;
 	}
-	
+
+	public List<String> getThumbnail() {
+		return thumbnail;
+	}
+
+	public void setThumbnail(List<String> thumbnail) {
+		this.thumbnail = thumbnail;
+	}
+
 
 }

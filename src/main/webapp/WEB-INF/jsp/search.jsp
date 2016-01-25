@@ -91,9 +91,11 @@
 						<c:forEach var="listValue" items="${lists}">
 							<div class="col-lg-6 col-sm-12 well well-sm text-left">
 								
-								<c:forEach var="sub" items="${listValue.name}">
-									<p>creator: ${sub}</p>
-								</c:forEach>
+								<bold>
+									<c:forEach var="sub" items="${listValue.name}">
+										<p>creator: ${sub}</p>
+									</c:forEach>
+								</bold>
 								
 								<c:forEach var="sub2" items="${listValue.collection}">
 									<p>collection: ${sub2}</p>
@@ -107,7 +109,9 @@
 									<p>title: ${sub4}</p>
 								</c:forEach>
 								
-								<a href="${listValue.url}">Link</a>
+								<a href="${listValue.url}"> LInk</a>
+								<img src="${listValue.thumbnail}" alt="Link" />
+								
 								<br/>
 							</div>
 						</c:forEach>
