@@ -22,7 +22,7 @@
 
 	<!-- navbar -->
 	<%@ include file="/WEB-INF/jsp/order/navbar.jsp" %>
-	<div class="parallax-window" data-parallax="scroll" data-image-src="img/nosColonies.jpeg"></div>
+	<div class="parallax-window" data-parallax="scroll" data-image-src="img/art3.jpg"></div>
 	
 
 <div class="panel panel-info">
