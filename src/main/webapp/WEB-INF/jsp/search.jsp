@@ -46,7 +46,7 @@
 					    		<br>
 				    			<div>
 				    						<label for="title">Title:</label>
-					    					<inp	ut class="form-control" name="title" id="title" />
+					    					<input class="form-control" name="title" id="title" />
 								</div>
 						</div>	
 						<div class="col-mg-6 "style="padding-left:20px;">
