@@ -84,11 +84,18 @@
 		<ul>
 			<c:forEach var="listValue" items="${lists}">
 				<div class="col-lg-6 col-sm-12 well well-sm text-left">
-					<p>${listValue.title}</p>
-					<p>${listValue.shownBy}</p>
-					<p>${listValue.dataProvider}</p>
-					<p>${listValue.rights}</p>
-					<p> </p>
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<c:forEach var="titleValue" items="${listValue.title}">
+								<p>${titleValue}</p>
+							</c:forEach>
+						</div>
+	 					<div class="panel-body panel-info">
+							<p><b>shownBy:</b> ${listValue.shownBy}</p>
+							<p><b>dataProvider:</b> ${listValue.dataProvider}</p>
+							<p><b>Rights:</b> ${listValue.rights}</p>
+						</div>
+					</div>
 				</div>
 			</c:forEach>
 		</ul>
