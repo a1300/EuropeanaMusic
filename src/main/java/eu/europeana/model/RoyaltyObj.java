@@ -4,31 +4,22 @@ import java.util.List;
 
 public class RoyaltyObj {
 
-	private String title;
-	private String reusability;
+	private List<String> title;
 	private List<String> shownBy;
 	
-	public RoyaltyObj(String title, String reusability, List<String> shownBy) {
+	public RoyaltyObj(List<String> title, List<String> shownBy) {
 		this.setTitle(title);
-		this.setReusability(reusability);
 		this.setShownBy(shownBy);
 	}
 
-	public String getTitle() {
+	public List<String> getTitle() {
 		return title;
 	}
 
-	public void setTitle(String title) {
+	public void setTitle(List<String> title) {
 		this.title = title;
 	}
 
-	public String getReusability() {
-		return reusability;
-	}
-
-	public void setReusability(String reusability) {
-		this.reusability = reusability;
-	}
 
 	public List<String> getShownBy() {
 		return shownBy;

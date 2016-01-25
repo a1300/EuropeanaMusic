@@ -39,9 +39,9 @@
 		 
 		   <br><br><br><br><br> 
 		
-		    <div id="single-field" style="float: left;padding-left:20px; width: 350px;">
+		    <div id="single-field" style="float: left;padding-left:20px; maring-right: 50px; width: 350px;">
 		   		    <p>Title:		</p>
-		    	    <input name="title" id="title" />
+		    	    <input class="form-control" name="title" id="title" />
 			</div>
 			
            	<div id="royalty" class="royalty well well-sm" style="float: right; padding-right:20px; ">
@@ -54,13 +54,13 @@
 						</h4>
 					</p>
 		        	<label class="radio-inline" style="width:250;">
-  						<input type="radio" name="inlineRadioOptions" value="open" 				id="royaltyOpen">Free use
+  						<input type="radio" name="reusability" value="open" checked>Free use
 					</label>
 					<label class="radio-inline" style="width:250;">
-  						<input type="radio" name="inlineRadioOptions" value="restricted" 	id="royaltyRestricted">Free use, giving credit to the author
+  						<input type="radio" name="reusability" value="restricted">Free use, giving credit to the author
 					</label>
 					<label class="radio-inline" style="width:250;">
-  						<input type="radio" name="inlineRadioOptions" value="permission" 	id="royaltyPermission"> only with explicit permission
+  						<input type="radio" name="reusability" value="permission">only with explicit permission
 					</label>
 			</div>
 		
