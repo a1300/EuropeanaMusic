@@ -94,7 +94,6 @@
 								</c:forEach>
 								
 								<b>Link: </b>
-									
 								<div class="btn btn-info btn-sm">
 									<a href="${listValue.url}" target="_blank">Europeana Link</a>
 								</div>
@@ -110,12 +109,12 @@
 									<c:forEach var="dataPVal" items="${listValue.shownBy}">
 											<b>Preview: </b>
 											<div class="btn btn-info btn-sm">
-												<a href="${dataPVal}">Link</a>
+												<a href="${dataPVal}" target="_blank">Link</a>
 											</div>
 									</c:forEach>
 								</c:when>
 								<c:otherwise>
-									<p><b>Provider: </b><span class="label label-default">...</span></p>
+									<p><b>Provider: </b><span class="label label-default" >...</span></p>
 								</c:otherwise>
 							</c:choose>
 					
