@@ -44,14 +44,14 @@
            	<div id="royalty" class="royalty" style="float: right; padding-right:20px; ">
 			
 					<p>Can i use it? :		</p>
-		        	<label class="checkbox-inline" style="width:250;">
-  						<input type="checkbox" name="royaltyOpen" value="open" 				id="royaltyOpen">Free use
+		        	<label class="radio-inline" style="width:250;">
+  						<input type="radio" name="inlineRadioOptions" value="open" 				id="royaltyOpen">Free use
 					</label>
-					<label class="checkbox-inline" style="width:250;">
-  						<input type="checkbox" name="royaltyRestricted" value="restricted" 	id="royaltyRestricted">Free use, giving credit to the author
+					<label class="radio-inline" style="width:250;">
+  						<input type="radio" name="inlineRadioOptions" value="restricted" 	id="royaltyRestricted">Free use, giving credit to the author
 					</label>
-					<label class="checkbox-inline" style="width:250;">
-  						<input type="checkbox" name="royaltyPermission" value="permission" 	id="royaltyPermission"> only with explicit permission
+					<label class="radio-inline" style="width:250;">
+  						<input type="radio" name="inlineRadioOptions" value="permission" 	id="royaltyPermission"> only with explicit permission
 					</label>
 			</div>
 		
