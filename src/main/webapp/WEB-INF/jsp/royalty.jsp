@@ -102,10 +102,12 @@
 							<c:choose>
 	 							<c:when test="${not empty listValue.dataProvider}">
 									<c:forEach var="dataPVal" items="${listValue.dataProvider}">
-										<p><b>Data Provider</b></p>
-										<div class="btn btn-info btn-md">
-											<a href="${dataPVal}">Link</a>
-										</div>
+										<span class="form-group">
+											<b>Data Provider</b>
+											<div class="btn btn-info btn-sm inline">
+												<a href="${dataPVal}">Link</a>
+											</div>	
+										</span>
 									</c:forEach>
 								</c:when>
 								<c:otherwise>
