@@ -63,9 +63,10 @@
 			    	 
 			    	 <!-- buttons -->
 			    	 <div class="form-group">
-			   	    	<button type="submit" class="btn btn-lg btn-primary">Search</button>
-			   	    	<button type="submit" class="btn btn-lg btn-success">Default Search</button>
+			    	 	<button type="submit" class="btn btn-lg btn-primary btn-block">Search</button>
+			   	    	<button type="submit" class="btn btn-lg btn-success btn-block">Default Search</button>
 			    	 </div>
+			    	 
 		    	 </div><!-- end allignment -->
 	    	 </div> <!-- class row -->
 	    	    
