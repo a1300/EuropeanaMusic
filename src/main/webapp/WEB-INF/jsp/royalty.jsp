@@ -86,6 +86,8 @@
 				<div class="col-lg-6 col-sm-12 well well-sm text-left">
 					<p>${listValue.title}</p>
 					<p>${listValue.shownBy}</p>
+					<p>${listValue.dataProvider}</p>
+					<p>${listValue.rights}</p>
 					<p> </p>
 				</div>
 			</c:forEach>

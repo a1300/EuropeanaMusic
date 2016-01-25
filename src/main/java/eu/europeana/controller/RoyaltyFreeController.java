@@ -45,21 +45,22 @@ public class RoyaltyFreeController {
 			Api2Query europeanaQuery  = new Api2Query();
 			//test
 			//europeanaQuery.setCreator("Bach");
+			europeanaQuery.setTitle(title);
 			europeanaQuery.setProfile("rich");
 			europeanaQuery.setType(EuropeanaComplexQuery.TYPE.SOUND);
 
 			//test
-			europeanaQuery.setTitle(title);
+			
 			
 			
 			if(reusability.equals("open")) {
 				europeanaQuery.setWholeSubQuery("permission=open");
 			}
 			if(reusability.equals("restricted")) {
-				europeanaQuery.setWholeSubQuery("reusability=restricted");
+				europeanaQuery.setWholeSubQuery("permission=restricted");
 			}
 			if(reusability.equals("permission")) {
-				europeanaQuery.setWholeSubQuery("reusability=permission");
+				europeanaQuery.setWholeSubQuery("permission=permission");
 			}
 
 			
@@ -76,7 +77,7 @@ public class RoyaltyFreeController {
 			List<RoyaltyObj> royaltyList = new ArrayList<RoyaltyObj>();
 			
 			for (EuropeanaApi2Item item: results.getAllItems()){
-				royaltyList.add(new RoyaltyObj(item.getTitle(),item.getRights()));
+				royaltyList.add(new RoyaltyObj(item.getTitle(),item.getEdmIsShownBy(),item.getDataProvider(),item.getRights()));
 			}
 			
 				
