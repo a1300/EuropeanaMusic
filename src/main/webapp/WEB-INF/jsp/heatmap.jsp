@@ -32,14 +32,34 @@
 
 	
 	<!-- Form start -->
-	<form class="form" method="post" action="${model.pageName}" id="register">
+	<form class="form text-center" method="post" action="${model.pageName}" id="register">
 		<div class="form-group">
     	    <div class="col-md-4 col-sm-6 col-xs-12">
-    	    	<label for="search">Search:</label>
+    	    	<label class="pull-left" for="search">Search:</label>
+    	    	<!-- if you don't specify a string, then -->
     	    	<input type="text" class="form-control" name="name" id="search" placeholder="e.g. Folklore" />
-    	    	<button type="submit" class="btn btn-lg btn-primary">Search</button>
     	    </div>
-		</div>
+    	 </div>
+    	 
+    	 <div class="form-group">
+    	 	<!-- radio -->
+   	    	<label class="radio-inline">
+				<input type="radio" name="contentType" value="IMAGE" checked>IMAGE
+			</label>
+			<label class="radio-inline">
+ 				<input type="radio" name="contentType" value="SOUND">SOUND
+			</label>
+			<label class="radio-inline">
+ 				<input type="radio" name="contentType" value="TEXT">TEXT
+			</label>
+    	 </div>
+    	 
+    	 <!-- buttons -->
+    	 <div class="form-group">
+   	    	<button type="submit" class="btn btn-lg btn-primary">Search</button>
+   	    	<button type="submit" class="btn btn-lg btn-success">Default Search</button>
+    	 </div>
+    	    
 	</form>	
 	<!-- Form end -->
 
