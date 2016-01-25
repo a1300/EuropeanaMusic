@@ -25,8 +25,47 @@
 	<div class="parallax-window" data-parallax="scroll" data-image-src="img/nosColonies.jpeg"></div>
 	
 
-	<!-- just testcontent -->
-	<%@ include file="/WEB-INF/jsp/order/testContent.jsp" %>
+<div class="panel panel-info">
+  		<div class="panel-heading">
+  			  <h3 class="panel-title"><b>HEATMAP</b></h3>
+  		</div>
+  		<div class="panel-body panel-info text-center">
+  			<b>Here you will find the function of Visualize regional appearance of folklore music<br /> 
+  			This function is taken from EPIC 3!
+  			</b>	
+ 		 </div>
+	</div>
+	<div class="panel panel-warning">
+  		<div class="panel-heading">
+  			  <h3 class="panel-title"> <b> SEARCH </b></h3>
+  		</div>
+  		<div class="panel-body panel-info text-center">  		
+  		<b>	In search page you will find the search filter which offers you search functionalities of our web application in different ways.<br/>
+		These search functions were taken from EPIC 1!
+		</b>
+ 		 </div>
+	
+	</div>
+	
+	<div class="panel panel-primary">
+  		<div class="panel-heading">
+  			  <h3 class="panel-title"><b>RoyaltyFree</b></h3>
+  		</div>
+  		<div class="panel-body panel-info text-center">
+  			<b>
+  			This page provides very special functions in order to see different rights of music. 
+  			</b>
+	</div>
+	<div class="panel panel-info">
+  		<div class="panel-heading">
+  			  <h3 class="panel-title"><b>About</b></h3>
+  		</div>
+  		<div class="panel-body panel-info text-center">
+  			<b> Here you will all details about our project like Feature, Functions, API Overview, Summary amd Activities per person.</b>	
+ 		 </div>
+	</div>
+	</div>
+
 	
 </body>
 </html>
