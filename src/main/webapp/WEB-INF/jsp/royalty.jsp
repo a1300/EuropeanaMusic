@@ -22,6 +22,52 @@
 	<%@ include file="/WEB-INF/jsp/order/navbar.jsp" %>
 
 
+	<form method="post" action="${model.pageName}" id="register">
+	    
+	     <div class="container1" style=" float: left;position: relative;left: 50%;">
+  			<div class="fixer-container" style="float: left;position: relative;left: -50%;">
+	
+	     	   <div style="float: center;text-align:center; padding-left:20px;">
+		    	    <br>
+		    	    	<p>In this site you will get information about the rights of the songs in europeana and
+		    	     	 you could hear a preview of the song (if the rights allow it).	</p>
+		    	    	<p>The probability to get a preview of a song is higher by selecting "free use"</p>
+		 </div></div></div>
+		 
+		   <br><br><br><br><br>  
+		
+		    <div id="single-field" style="float: left;padding-left:20px; width: 350px;">
+		   		    <p>Title:		</p>
+		    	    <input name="title" id="title" />
+			</div>
+			
+           	<div id="royalty" class="royalty" style="float: right; padding-right:20px; ">
+			
+					<p>Can i use it? :		</p>
+		        	<label class="radio-inline" style="width:250;">
+  						<input type="radio" name="inlineRadioOptions" value="open" 				id="royaltyOpen">Free use
+					</label>
+					<label class="radio-inline" style="width:250;">
+  						<input type="radio" name="inlineRadioOptions" value="restricted" 	id="royaltyRestricted">Free use, giving credit to the author
+					</label>
+					<label class="radio-inline" style="width:250;">
+  						<input type="radio" name="inlineRadioOptions" value="permission" 	id="royaltyPermission"> only with explicit permission
+					</label>
+			</div>
+		
+ 		
+ 				<br><br><br><br>
+ 			<div id="send" style="float: left; padding-left:20px; width: 100px;">
+ 				<input type="submit" value="send"/>
+ 			</div>		
+ 		
+ 		<br>
+ 		
+ 		<hr style="padding-left:20px; height: 3px; border: 0; border-top: 1px solid #ccc;">
+	
+	</form>
+
+
 
 </body>
 </html>

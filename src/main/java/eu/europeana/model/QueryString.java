@@ -27,6 +27,11 @@ public class QueryString {
 		return  "http://www.europeana.eu/api/v2/search.json?";
 	}
 	
+	public String getKey(){
+		
+		return  "wskey=iiiHVMLBw";
+	}
+	
 	
 	private String getQueryParam(ArrayList<String> list) {
 	

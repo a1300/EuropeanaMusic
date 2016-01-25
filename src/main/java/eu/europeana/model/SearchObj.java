@@ -4,26 +4,50 @@ import java.util.List;
 
 public class SearchObj {
 
-	private String Name;
-	private List<String> Titel;
+	private List<String> name;
+	private List<String> title;
+	private List<String> collection;
+	private List<String> shownBy;
 	
-	public SearchObj(String name, List<String> titel) {
+	public SearchObj(List<String> name, List<String> title, List<String> collection, List<String> shownBy) {
 		
-		this.Name = name;
-		this.Titel = titel;
+		this.setName(name);
+		this.setTitle(title);
+		this.setCollection(collection);
+		this.setShownBy(shownBy);
+	}
+
+	public List<String> getName() {
+		return name;
+	}
+
+	public void setName(List<String> name) {
+		this.name = name;
+	}
+
+	public List<String> getTitle() {
+		return title;
+	}
+
+	public void setTitle(List<String> title) {
+		this.title = title;
+	}
+
+	public List<String> getCollection() {
+		return collection;
+	}
+
+	public void setCollection(List<String> collection) {
+		this.collection = collection;
+	}
+
+	public List<String> getShownBy() {
+		return shownBy;
+	}
+
+	public void setShownBy(List<String> shownBy) {
+		this.shownBy = shownBy;
 	}
 	
-	public String getName() {
-		return Name;
-	}
-	public void setName(String name) {
-		Name = name;
-	}
-	public List<String> getTitel() {
-		return Titel;
-	}
-	public void setTitel(List<String> titel) {
-		Titel = titel;
-	}
 
 }
