@@ -29,6 +29,22 @@
 	<!-- heatmap -->
 	<%@ include file="/WEB-INF/jsp/order/heatmapDependency.jsp" %>
 	
+
+	
+	<!-- Form start -->
+	<form class="form" method="post" action="${model.pageName}" id="register">
+		<div class="form-group">
+    	    <div class="col-md-4 col-sm-6 col-xs-12">
+    	    	<label for="search">Search:</label>
+    	    	<input type="text" class="form-control" name="name" id="search" placeholder="e.g. Folklore" />
+    	    	<button type="submit" class="btn btn-lg btn-primary">Search</button>
+    	    </div>
+		</div>
+	</form>	
+	<!-- Form end -->
+
+
+
 	
 	
 	<!-- start reading data into javascript variable from java bean -->
@@ -54,10 +70,6 @@
 		</ul>
 	</c:if>
 	<!-- read data from bean -->
-	
-	
-	
-	
 	
 	<!-- drawing data into heatmap, must be after heatmapDependency.jsp import -->
 	<script>
@@ -116,6 +128,8 @@
 	    var marker = L.marker([40.731701, -73.993411]).addTo(map);
 
 	</script>
+	
+
 	
 
 </body>
