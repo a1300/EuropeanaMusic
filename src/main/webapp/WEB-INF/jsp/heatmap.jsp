@@ -32,35 +32,46 @@
 
 	
 	<!-- Form start -->
-	<form class="form text-center" method="post" action="${model.pageName}" id="register">
-		<div class="form-group">
-    	    <div class="col-md-4 col-sm-6 col-xs-12">
-    	    	<label class="pull-left" for="search">Search:</label>
-    	    	<!-- if you don't specify a string, then -->
-    	    	<input type="text" class="form-control" name="name" id="search" placeholder="e.g. Folklore" />
-    	    </div>
-    	 </div>
-    	 
-    	 <div class="form-group">
-    	 	<!-- radio -->
-   	    	<label class="radio-inline">
-				<input type="radio" name="contentType" value="IMAGE" checked>IMAGE
-			</label>
-			<label class="radio-inline">
- 				<input type="radio" name="contentType" value="SOUND">SOUND
-			</label>
-			<label class="radio-inline">
- 				<input type="radio" name="contentType" value="TEXT">TEXT
-			</label>
-    	 </div>
-    	 
-    	 <!-- buttons -->
-    	 <div class="form-group">
-   	    	<button type="submit" class="btn btn-lg btn-primary">Search</button>
-   	    	<button type="submit" class="btn btn-lg btn-success">Default Search</button>
-    	 </div>
-    	    
-	</form>	
+	<div class="container">
+	
+		<form class="form text-center" method="post" action="${model.pageName}" id="register">
+			
+			<div class="row">
+				<div class="form-group">
+		    	    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+		    	    	<label class="pull-left" for="search">Search:</label>
+		    	    	<!-- if you don't specify a string, then -->
+		    	    	<input type="text" class="form-control" name="name" id="search" placeholder="e.g. Folklore" />
+		    	    </div>
+		    	 </div>
+	    	 </div>
+	    	 
+	    	 <div class="row">
+	    	 	<div class="col-md-4 col-sm-12 col-xs-12">
+			    	<div class="form-group">
+			    	 	<!-- radio -->
+			   	    	<label class="radio-inline">
+							<input type="radio" name="contentType" value="IMAGE" checked>IMAGE
+						</label>
+						<label class="radio-inline">
+			 				<input type="radio" name="contentType" value="SOUND">SOUND
+						</label>
+						<label class="radio-inline">
+			 				<input type="radio" name="contentType" value="TEXT">TEXT
+						</label>
+			    	 </div>
+			    	 
+			    	 <!-- buttons -->
+			    	 <div class="form-group">
+			   	    	<button type="submit" class="btn btn-lg btn-primary">Search</button>
+			   	    	<button type="submit" class="btn btn-lg btn-success">Default Search</button>
+			    	 </div>
+		    	 </div><!-- end allignment -->
+	    	 </div> <!-- class row -->
+	    	    
+		</form>
+		
+	</div> <!-- end div class="container" -->
 	<!-- Form end -->
 
 
