@@ -72,9 +72,11 @@
 
 				<br><br><br><br>			
  			<div id="send" style="float: left; padding-left:20px; width: 10px;">
- 				<input type="submit" value="send"/>
+ 				<input class="btn btn-lg btn-success" type="submit" value="send"/>
  			</div>		
- 		<br>
+ 		<br/>
+ 		<br/>
+ 		<br/>
  		
  		<hr style="padding-left:20px; height: 3px; border: 0; border-top: 1px solid #ccc;">
 	
@@ -90,29 +92,33 @@
 					<ul>
 						<c:forEach var="listValue" items="${lists}">
 							<div class="col-lg-6 col-sm-12 well well-sm text-left">
+					
 								
-								<bold>
-									<c:forEach var="sub" items="${listValue.name}">
-										<p>creator: ${sub}</p>
-									</c:forEach>
-								</bold>
-								
-								<c:forEach var="sub2" items="${listValue.collection}">
-									<p>collection: ${sub2}</p>
+								<c:forEach var="sub" items="${listValue.name}">
+									<p>
+										<h4><span class="label label-default">creator:</span>  ${sub}</h4>
+									</p>
 								</c:forEach>
 								
-								<c:forEach var="sub3" items="${listValue.shownBy}">
-									<p>shown by: ${sub3}</p>
+								<c:forEach var="sub2" items="${listValue.collection}">
+									<p><b>collection:</b> ${sub2}</p>
 								</c:forEach>
 								
 								<c:forEach var="sub4" items="${listValue.title}">
-									<p>title: ${sub4}</p>
+									<p><b>title:</b> ${sub4}</p>
 								</c:forEach>
 								
-								<a href="${listValue.url}"> LInk</a>
-								<img src="${listValue.thumbnail}" alt="Link" />
+								<div class="btn btn-info btn-md">
+									<a href="${listValue.url}">Europeana Link</a>
+								</div>
 								
-								<br/>
+								<div class="btn btn-danger btn-md">
+									<c:forEach var="sub3" items="${listValue.shownBy}">
+										<a href="${sub3}"><b>Shown By</b></a>
+									</c:forEach>
+								</div>
+					
+								
 							</div>
 						</c:forEach>
 					</ul>
@@ -120,15 +126,5 @@
 			</div>
 		</div>
 		
-		<!-- footer -->
-		<div class="navbar navbar-default navbar-fixed-bottom hidden-sm hidden-xs">
-			<div class="container">
-				<div class="navbar-text">
-					<p>Universität Wien - Fakultät für Informatik - © 2015 - 2016</p>
-					<p>Matthias Knopp, Ricardo Arangüena, Umair Altaf</p>
-				</div>
-			</div>
-		</div>
- 	
 </body>
 </html>
