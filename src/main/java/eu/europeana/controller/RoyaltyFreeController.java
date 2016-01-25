@@ -77,16 +77,16 @@ public class RoyaltyFreeController {
 			List<RoyaltyObj> royaltyList = new ArrayList<RoyaltyObj>();
 			
 			for (EuropeanaApi2Item item: results.getAllItems()){
-				royaltyList.add(new RoyaltyObj(item.getTitle(),item.getEdmIsShownBy(),item.getDataProvider(),item.getRights()));
+				royaltyList.add(new RoyaltyObj(item.getTitle(), item.getEdmIsShownBy(), item.getDataProvider(), item.getRights()));
 			}
-			
 				
 			ModelAndView mav = new ModelAndView("royalty");
 			mav.addObject("lists", royaltyList);
-			
-			
+				
 			return mav;
 		}
+		
+		
 		
 		@RequestMapping(value={"/royalty", "/royaltyfree"}, method=RequestMethod.GET)
 		public ModelAndView handleGet() {

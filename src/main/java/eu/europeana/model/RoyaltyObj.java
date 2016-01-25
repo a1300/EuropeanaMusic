@@ -10,11 +10,11 @@ public class RoyaltyObj {
 	private List<String> dataProvider;
 	private List<String> rights;
 	
-	public RoyaltyObj(List<String> title, List<String> shownBy,List<String> dataProvider,List<String> rights) {
+	public RoyaltyObj(List<String> title, List<String> shownBy, List<String> dataProvider, List<String> rights) {
 		this.setTitle(title);
 		this.setShownBy(shownBy);
 		this.setDataProvider(dataProvider);
-		this.setDataProvider(rights);
+		this.setRights(rights);
 	}
 
 	public List<String> getTitle() {

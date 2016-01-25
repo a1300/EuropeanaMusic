@@ -87,7 +87,7 @@
 					<div class="panel panel-primary">
 						<div class="panel-heading">
 							<c:forEach var="titleValue" items="${listValue.title}">
-								<p>${titleValue}</p>
+								<h5>${titleValue}</h5>
 							</c:forEach>
 						</div>
 	 					<div class="panel-body panel-info">
@@ -101,7 +101,12 @@
 							</c:choose>
 							<c:choose>
 	 							<c:when test="${not empty listValue.dataProvider}">
-									<p><b>DataProvider:</b> ${listValue.dataProvider}</p>
+									<c:forEach var="dataPVal" items="${listValue.dataProvider}">
+										<p><b>Data Provider</b></p>
+										<div class="btn btn-info btn-md">
+											<a href="${dataPVal}">Link</a>
+										</div>
+									</c:forEach>
 								</c:when>
 								<c:otherwise>
 									<p><b>DataProvider: </b><span class="label label-default">...</span></p>
