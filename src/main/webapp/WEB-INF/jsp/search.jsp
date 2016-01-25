@@ -39,16 +39,16 @@
            	<div  class="radio-inline" data-toggle="buttons-radio" style="float: left;padding-left:20px width: 350px;">
 					<p>Language:		</p>
 		        	<label class="radio-inline">
-  						<input type="radio" name="inlineRadioOptions1" value="languageEnglish" 	id="languageEnglish"> English
+  						<input type="radio" name="radioLang" value="en" 	id="languageEnglish"> English
 					</label>
 					<label class="radio-inline">
-					  	<input type="radio" name="inlineRadioOptions1" value="languageGerman" 	id="languageGerman"> German
+					  	<input type="radio" name="radioLang" value="de" 	id="languageGerman"> German
 					</label>
 					<label class="radio-inline">
-	 	 				<input type="radio" name="inlineRadioOptions1" value="languageFrench" 	id="languageFrench"> French
+	 	 				<input type="radio" name="radioLang" value="fr" 	id="languageFrench"> French
 					</label>
 					<label class="radio-inline">
-	 	 				<input type="radio" name="inlineRadioOptions1" value="languageSpanish"	id="languageSpanish"> Spanish
+	 	 				<input type="radio" name="radioLang" value="es"	id="languageSpanish"> Spanish
 					</label>
  				<br>	
 			</div>
@@ -56,16 +56,16 @@
 			<div id="country" class="country" style="float: left;padding-left:20px; width: 400px;">
 					<p>Country:		</p>
 					<label class="radio-inline">
-  						<input type="radio" name="inlineRadioOptions" value="countryEngland" 	id="countryEngland"> England
+  						<input type="radio" name="radioCoun" value="austria"> Austria
 					</label>
 					<label class="radio-inline">
-					  	<input type="radio" name="inlineRadioOptions" value="countryGermany" 	id="countryGermany"> Germany
+					  	<input type="radio" name="radioCoun" value="germany"> Germany
 					</label>
 					<label class="radio-inline">
-	 	 				<input type="radio" name="inlineRadioOptions" value="countryFrance" 	id="countryFrance"> France
+	 	 				<input type="radio" name="radioCoun" value="france"> France
 					</label>
 					<label class="radio-inline">
-	 	 				<input type="radio" name="inlineRadioOptions" value="countrySpain"	id="countrySpain"> Spain
+	 	 				<input type="radio" name="radioCoun" value="spain"> Spain
 					</label>
  				<br><br>	
 			</div>
@@ -92,17 +92,23 @@
 							<div class="col-lg-6 col-sm-12 well well-sm text-left">
 								
 								<c:forEach var="sub" items="${listValue.name}">
-									<p>creator : ${sub}</p>
+									<p>creator:</p>
+									<p>${sub}</p>
 								</c:forEach>
 								
 								<c:forEach var="sub2" items="${listValue.collection}">
-									<p>collection : ${sub2}</p>
+									<p>collection:</p>
+									<p>${sub2}</p>
 								</c:forEach>
+								
 								<c:forEach var="sub3" items="${listValue.shownBy}">
-									<p>shown by : ${sub3}</p>
+									<p>shown by: </p>
+									<p>${sub3}</p>
 								</c:forEach>
+								
 								<c:forEach var="sub4" items="${listValue.title}">
-									<p>title : ${sub4}</p>
+									<p>title:</p>
+									<p>${sub4}</p>
 								</c:forEach>
 								<br/>
 							</div>
