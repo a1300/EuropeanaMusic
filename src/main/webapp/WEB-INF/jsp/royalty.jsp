@@ -93,24 +93,33 @@
 						</div>
 	 					<div class="panel-body panel-info">
 	 						
-	 						<c:choose>
+							
+							<!-- ShownBy START -->
+							<c:choose>
 	 							<c:when test="${not empty listValue.shownBy}">
-									<p><b>shownBy:</b> ${listValue.shownBy}</p>
+									<c:forEach var="dataPVal" items="${listValue.shownBy}">
+										<span class="form-group">
+											<b>ShownBy: </b>
+											<div class="btn btn-info btn-sm inline">
+												<a href="${dataPVal}">Link</a>
+											</div>
+										</span>
+									</c:forEach>
+									<br/>
 								</c:when>
 								<c:otherwise>
-									<p><b>ShownBy: </b><span class="label label-default">...</span></p>
+									<p><b>DataProvider: </b><span class="label label-default">...</span></p>
 								</c:otherwise>
 							</c:choose>
+							<!-- ShownBy END -->
 							
 							
+							<!-- Data Provider Start -->
 							<c:choose>
 	 							<c:when test="${not empty listValue.dataProvider}">
 									<c:forEach var="dataPVal" items="${listValue.dataProvider}">
 										<span class="form-group">
-											<b>Data Provider: </b>
-											<div class="btn btn-info btn-sm inline">
-												<a href="${dataPVal}">Link</a>
-											</div>	
+											<p><b>Data Provider: </b>${dataPVal}</p>
 										</span>
 									</c:forEach>
 								</c:when>
@@ -118,14 +127,27 @@
 									<p><b>DataProvider: </b><span class="label label-default">...</span></p>
 								</c:otherwise>
 							</c:choose>
+							<!-- Data Provider END -->
+							
+							
+							<!-- Rights Start -->
 							<c:choose>
 	 							<c:when test="${not empty listValue.rights}">
-									<p><b>Rights:</b> ${listValue.rights}</p>
+									<c:forEach var="dataPVal" items="${listValue.rights}">
+										<span class="form-group">
+											<b>Rights: </b>
+											<div class="btn btn-info btn-sm inline">
+												<a href="${dataPVal}">Link</a>
+											</div>
+										</span>
+									</c:forEach>
 								</c:when>
 								<c:otherwise>
-									<p><b>Rights: </b><span class="label label-default">...</span></p>
+									<p><b>DataProvider: </b><span class="label label-default">...</span></p>
 								</c:otherwise>
-							</c:choose>					
+							</c:choose>
+							<!-- Rights END -->
+								
 						</div>
 					</div>
 				</div>
