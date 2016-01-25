@@ -1,5 +1,6 @@
 package eu.europeana.controller;
 import java.io.IOException;
+import java.util.Random;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -111,6 +112,25 @@ public class HeatmapController {
 		list.add(new LongLat(52.34, 13.8, 1));
 		list.add(new LongLat(52.1, 13.9, 1));
 		
+		int wieViel = (int) randInt(15, 30);
+		for(int i = 0; i < wieViel; ++i) {
+			System.out.println("random: " + randInt(30, 50));
+			list.add(new LongLat(randInt(40, 50), randInt(10, 30), 1.0));
+		}
+		
+		int wieoft = (int) randInt(5, 15);
+		for(int i = 0; i < wieoft; ++i) {
+			list.add(new LongLat(randInt(40, 50), randInt(0, 15), 1.0));
+		}
+		
 		return list;
+	}
+	
+	public double randInt(double min, double max) {
+
+		double intWert = ( min + (int)(Math.random() * ((max - min) + 1))  );
+		
+		double plusRest = intWert + (double) intWert/100;
+		return plusRest - 0.07;
 	}
 }
