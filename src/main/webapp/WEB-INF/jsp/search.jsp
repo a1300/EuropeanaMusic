@@ -98,18 +98,27 @@
 	
 	</form>
 	
+		<br/>
+		<br/>
+		<br/>
 		
-		<c:if test="${not empty lists}">
-			<ul>
-				<c:forEach var="listValue" items="${lists}">
-						<p>${listValue.name}</p>
-						<c:forEach var="sub" items="${listValue.titel}">
-							<p>${sub}</p>
+		<div class="container">
+			<div class="row">
+				<c:if test="${not empty lists}">
+					<ul>
+						<c:forEach var="listValue" items="${lists}">
+							<div class="col-lg-6 col-sm-12 well well-sm text-left">
+								<p>${listValue.name}</p>
+								<c:forEach var="sub" items="${listValue.titel}">
+									<p>${sub}</p>
+								</c:forEach>
+								<br/>
+							</div>
 						</c:forEach>
-					<br/>
-				</c:forEach>
-			</ul>
-		</c:if>
+					</ul>
+				</c:if>
+			</div>
+		</div>
 		
  	
 </body>
