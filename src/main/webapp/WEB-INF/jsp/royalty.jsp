@@ -68,8 +68,8 @@
  				<br><br><br><br>
  			<div id="send" style="float: left; padding-left:20px; width: 100px;">
  				<input class="btn btn-lg btn-primary" type="submit" value="send"/>
- 			</div>		
- 		
+ 			</div>
+ 			
  		<br>
  		<br>
  		<br>
@@ -91,7 +91,14 @@
 							</c:forEach>
 						</div>
 	 					<div class="panel-body panel-info">
-							<p><b>shownBy:</b> ${listValue.shownBy}</p>
+	 						<c:choose>
+	 							<c:when test="${not empty listValue.shownBy}">
+									<p><b>shownBy:</b> ${listValue.shownBy}</p>
+								</c:when>
+								<c:otherwise>
+									<p><b>shownBy: </b><span class="label label-default">...</span></p>
+								</c:otherwise>
+							</c:choose>
 							<p><b>dataProvider:</b> ${listValue.dataProvider}</p>
 							<p><b>Rights:</b> ${listValue.rights}</p>
 						</div>
