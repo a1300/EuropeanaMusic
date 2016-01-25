@@ -102,6 +102,7 @@ public class SearchController /*extends SimpleFormController */ {
         EuropeanaApi2Client europeanaClient = new EuropeanaApi2Client();
 		EuropeanaApi2Results res = new EuropeanaApi2Results();
 		try {
+			System.out.println(europeanaQuery.getQueryString());
 			res = europeanaClient.searchApi2(europeanaQuery, 130, 1);
 		} catch (IOException e1) {
 			e1.printStackTrace();
