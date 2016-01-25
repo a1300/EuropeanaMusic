@@ -8,13 +8,15 @@ public class SearchObj {
 	private List<String> title;
 	private List<String> collection;
 	private List<String> shownBy;
+	private String url;
 	
-	public SearchObj(List<String> name, List<String> title, List<String> collection, List<String> shownBy) {
+	public SearchObj(List<String> name, List<String> title, List<String> collection, List<String> shownBy, String url) {
 		
 		this.setName(name);
 		this.setTitle(title);
 		this.setCollection(collection);
 		this.setShownBy(shownBy);
+		this.url = url;
 	}
 
 	public List<String> getName() {
@@ -47,6 +49,14 @@ public class SearchObj {
 
 	public void setShownBy(List<String> shownBy) {
 		this.shownBy = shownBy;
+	}
+
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
 	}
 	
 

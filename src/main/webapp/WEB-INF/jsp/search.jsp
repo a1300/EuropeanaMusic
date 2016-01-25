@@ -110,6 +110,8 @@
 									<p>title:</p>
 									<p>${sub4}</p>
 								</c:forEach>
+								
+								<a href="${listValue.url}">Link</a>
 								<br/>
 							</div>
 						</c:forEach>
