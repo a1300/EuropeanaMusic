@@ -87,7 +87,6 @@ public class RoyaltyFreeController {
 		}
 		
 		
-		
 		@RequestMapping(value={"/royalty", "/royaltyfree"}, method=RequestMethod.GET)
 		public ModelAndView handleGet() {
 			
