@@ -76,59 +76,58 @@
 		<br/>
 		
 		
-		<!-- still need to be edited -->>
+		<!-- still need to be edited
 		<div class="container">
-			<div class="row">
-				<c:if test="${not empty lists}">
-					<ul>
-						<c:forEach var="listValue" items="${lists}">
+			<div class="row"> -->
+	<c:choose>
+		<c:when test="${not empty lists}">
+			<ul>
+					<c:forEach var="listValue" items="${lists}">
 							<div class="col-lg-6 col-sm-12 well well-sm text-left">
-					
-								
-								<c:forEach var="sub1" items="${listValue.genre}">
-									<p><b>Genre:</b> ${sub1}</p>
-								</c:forEach>
-								
-								<c:forEach var="sub2" items="${listValue.country}">
-									<p><b>Country:</b> ${sub2}</p>
-								</c:forEach>
-								
-								<b>Link: </b>
-								<div class="btn btn-info btn-sm">
-									<a href="${listValue.url}" target="_blank">Europeana Link</a>
-								</div>
-								<!-- 
-								<div class="btn btn-info btn-sm">
-									<c:forEach var="sub3" items="${listValue.shownBy}">
-										<a href="${sub3}" target="_blank">Preview</a>
-									</c:forEach>
-								</div>
-					 -->
-							<c:choose>
-	 							<c:when test="${not empty listValue.shownBy}">
-									<c:forEach var="dataPVal" items="${listValue.shownBy}">
-											<b>Preview: </b>
-											<div class="btn btn-info btn-sm">
-												<a href="${dataPVal}" target="_blank">Link</a>
+									<div class="panel panel-primary">
+											<div class="panel-heading">
+												<c:forEach var="titeValue" items="${listValue.genre }">
+														<p><b>Genre:</b> ${sub1}</p>
+												</c:forEach>
 											</div>
-									</c:forEach>
-								</c:when>
-								<c:otherwise>
-									<p><b>Provider: </b><span class="label label-default" >...</span></p>
-								</c:otherwise>
-							</c:choose>
-					
-					
-					
-					
-					
-								
-							</div>
-						</c:forEach>
-					</ul>
-				</c:if>
+											<div class="panel-body panel-info">
+											
+														<c:forEach var="sub2" items="${listValue.country}">
+															<p><b>Country:</b> ${sub2}</p>
+														</c:forEach>
+														
+														<b>Link: </b>
+														<div class="btn btn-info btn-sm">
+															<a href="${listValue.url}" target="_blank">Europeana Link</a>
+														</div>
+													<c:choose>
+							 							<c:when test="${not empty listValue.shownBy}">
+															<c:forEach var="dataPVal" items="${listValue.shownBy}">
+																	<b>Preview: </b>
+																	<div class="btn btn-info btn-sm">
+																		<a href="${dataPVal}" target="_blank">Link</a>
+																	</div>
+															</c:forEach>
+														</c:when>
+														<c:otherwise>
+															<p><b>Provider: </b><span class="label label-default" >...</span></p>
+														</c:otherwise>
+													</c:choose>
+											</div>
+									</div>
+							</div>	
+					</c:forEach>
+			</ul>
+		</c:when>
+		
+		<c:otherwise>
+			<div style="text-align:center;">		
+				<p><b> :(     Sorry, we didn't found any item for your search.     :( </b></p>
+				<p>		(somewhere in the world a bunny has just cried... )</p>
 			</div>
-		</div>
+		</c:otherwise>
+		
+	</c:choose>
 		
 </body>
 </html>

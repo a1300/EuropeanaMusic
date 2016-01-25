@@ -80,7 +80,8 @@
 	<br/>
 	
 	<!--  here comes the data -->
-	<c:if test="${not empty lists}">
+	<c:choose>
+		<c:when test="${not empty lists}">
 		<ul>
 			<c:forEach var="listValue" items="${lists}">
 				<div class="col-lg-6 col-sm-12 well well-sm text-left">
@@ -152,9 +153,17 @@
 				</div>
 			</c:forEach>
 		</ul>
-	</c:if>
+	</c:when>
+	
+	<c:otherwise>
+		<div style="text-align:center;">		
+			<p><b> :(     Sorry, we didn't found any item for your search.     :( </b></p>
+			<p>		(somewhere in the world a bunny has just cried... )</p>
+		</div>
+	</c:otherwise>
+</c:choose>
+
 	<!-- data end -->
-
-
+	
 </body>
 </html>
