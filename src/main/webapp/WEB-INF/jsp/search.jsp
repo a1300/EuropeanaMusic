@@ -109,12 +109,12 @@
 								</c:forEach>
 								
 								<div class="btn btn-info btn-md">
-									<a href="${listValue.url}">Europeana Link</a>
+									<a href="${listValue.url}" target="_blank">Europeana Link</a>
 								</div>
 								
 								<div class="btn btn-danger btn-md">
 									<c:forEach var="sub3" items="${listValue.shownBy}">
-										<a href="${sub3}"><b>Shown By</b></a>
+										<a href="${sub3}" target="_blank"><b>Preview</b></a>
 									</c:forEach>
 								</div>
 					
