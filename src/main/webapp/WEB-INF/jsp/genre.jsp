@@ -85,19 +85,42 @@
 							<div class="col-lg-6 col-sm-12 well well-sm text-left">
 					
 								
-								<c:forEach var="sub4" items="${listValue.genre}">
-									<p><b>title:</b> ${sub4}</p>
+								<c:forEach var="sub1" items="${listValue.genre}">
+									<p><b>Genre:</b> ${sub1}</p>
 								</c:forEach>
 								
+								<c:forEach var="sub2" items="${listValue.country}">
+									<p><b>Country:</b> ${sub2}</p>
+								</c:forEach>
+								
+								<b>Link: </b>
 								<div class="btn btn-info btn-sm">
 									<a href="${listValue.url}" target="_blank">Europeana Link</a>
 								</div>
-								
+								<!-- 
 								<div class="btn btn-info btn-sm">
 									<c:forEach var="sub3" items="${listValue.shownBy}">
 										<a href="${sub3}" target="_blank">Preview</a>
 									</c:forEach>
 								</div>
+					 -->
+							<c:choose>
+	 							<c:when test="${not empty listValue.shownBy}">
+									<c:forEach var="dataPVal" items="${listValue.shownBy}">
+											<b>Preview: </b>
+											<div class="btn btn-info btn-sm">
+												<a href="${dataPVal}" target="_blank">Link</a>
+											</div>
+									</c:forEach>
+								</c:when>
+								<c:otherwise>
+									<p><b>Provider: </b><span class="label label-default" >...</span></p>
+								</c:otherwise>
+							</c:choose>
+					
+					
+					
+					
 					
 								
 							</div>

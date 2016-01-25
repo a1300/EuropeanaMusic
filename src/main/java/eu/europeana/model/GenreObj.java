@@ -7,12 +7,14 @@ public class GenreObj {
 		private List<String> genre;
 		private List<String> shownBy;
 		private String url;
+		private List<String> country;
 		
 		
-		public GenreObj (List<String> genre,List<String> shownBy,String url) {
+		public GenreObj (List<String> genre, List<String> shownBy, String url, List<String> country) {
 			this.setGenre(genre);
-			this.setGenre(shownBy);
+			this.setShownBy(shownBy);
 			this.url = url;
+			this.setCountry(country);
 		}
 		
 		public List<String> getGenre() {
@@ -37,6 +39,14 @@ public class GenreObj {
 
 		public void setUrl(String url) {
 			this.url = url;
+		}
+
+		public List<String> getCountry() {
+			return country;
+		}
+
+		public void setCountry(List<String> country) {
+			this.country = country;
 		}
 		
 		

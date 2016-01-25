@@ -50,6 +50,8 @@ public class GenreSearchController{
 		/* Make the QUERY */
 		Api2Query europeanaQuery = new Api2Query();
 		europeanaQuery.setTitle(genre);
+		europeanaQuery.setType(EuropeanaComplexQuery.TYPE.SOUND);
+		europeanaQuery.setProfile("rich");
 		
         EuropeanaApi2Client europeanaClient = new EuropeanaApi2Client();
 		EuropeanaApi2Results res = new EuropeanaApi2Results();
@@ -66,7 +68,8 @@ public class GenreSearchController{
        
 	    int count = 0;
         for (EuropeanaApi2Item item : res.getAllItems()) {
-        	jspList.add(new GenreObj(item.getTitle(),item.getEdmIsShownBy(), item.getObjectURL() ) );
+        	
+        	jspList.add(new GenreObj(item.getTitle(),item.getEdmIsShownBy(), item.getObjectURL(), item.getCountry() ) );
         		
         	 System.out.println();
 	         System.out.println("**** " + (count++ + 1));
@@ -77,7 +80,10 @@ public class GenreSearchController{
 	         System.out.println("Thumbnail(s): " + item.getEdmPreview());
 	         System.out.println("Data provider: "
 	                 + item.getDataProvider());
-		}
+	         System.out.println("Data provider: "
+	                 + item.getDataProvider());
+	         
+        }
 
 		ModelAndView mav = new ModelAndView("genre"); //route to search.jsp
 		mav.addObject("lists", jspList); //add jspList to the ModelAndView
