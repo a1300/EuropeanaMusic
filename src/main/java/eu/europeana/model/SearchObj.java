@@ -21,6 +21,9 @@ public class SearchObj {
 		this.url = url;
 	}
 
+
+	
+	
 	public List<String> getName() {
 		return name;
 	}

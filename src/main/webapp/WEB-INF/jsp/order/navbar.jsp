@@ -22,6 +22,7 @@
 			<li><a href="heatmap.html"><spring:message code="heatmap.text" /></a></li>
 			<li><a href="search.html"><spring:message code="search.text" /></a></li>
 			<li><a href="royalty.html"><spring:message code="royalty.text" /></a></li>
+			<li><a href="genre.html"><spring:message code="genre.text" /></a></li>
 	   	 </ul>
     	<ul class="nav navbar-nav navbar-right">
 		<li><a href="about.html">About</a></li>

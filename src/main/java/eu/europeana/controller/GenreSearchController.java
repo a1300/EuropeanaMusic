@@ -34,68 +34,22 @@ import org.springframework.web.servlet.mvc.SimpleFormController;
 
 
 @Controller
-public class SearchController /*extends SimpleFormController */ {
+public class GenreSearchController{
 
-	@RequestMapping(value="/search", method=RequestMethod.POST)
+	@RequestMapping(value="/genre", method=RequestMethod.POST)
 	public ModelAndView handlePost(
-			@RequestParam("name") String name,
-			@RequestParam("title") String title,
-			@RequestParam(value="radioLang", required = false)  String radioLang,
-			@RequestParam(value="radioCoun", required = false)  String radioCoun,
+			@RequestParam("genre") String genre,
 			HttpServletRequest request) {
 		
 		
 		ArrayList<String> list = new ArrayList<String>();
-		//add name
-		list.add(request.getParameter("name"));
 		
-		//add title
-		list.add(request.getParameter("title"));
+		//add genre
+		list.add(request.getParameter("genre"));
 		
-		//radioLanguages
-		if(request.getParameter("radioLang") != null) {
-			if(request.getParameter("radioLang").equals("en")) {
-				list.add("en");
-			}
-			if(request.getParameter("radioLang").equals("de")) {
-				list.add("de");
-			}
-			if(request.getParameter("radioLang").equals("fr")) {
-				list.add("fr");
-			}
-			if(request.getParameter("radioLang").equals("es")) {
-				list.add("es");
-			}
-		}
-		
-		//countries
-		if(request.getParameter("radioCoun") != null) {
-			if(request.getParameter("radioCoun").equals("austria")) {
-				list.add("austria");
-			}
-			if(request.getParameter("radioCoun").equals("germany")) {
-				list.add("germany");
-			}
-			if(request.getParameter("radioCoun").equals("france")) {
-				list.add("france");
-			}
-			if(request.getParameter("radioCoun").equals("spain")) {
-				list.add("spain");
-			}
-		}
-		/*
-		System.out.println("Achtung!!!:");
-		for(String s : list) {
-			System.out.println(s);
-		}*/
-
 		/* Make the QUERY */
 		Api2Query europeanaQuery = new Api2Query();
-		europeanaQuery.setCreator(name);
- 		europeanaQuery.setType(EuropeanaComplexQuery.TYPE.SOUND);
-		europeanaQuery.setTitle(title);
-		europeanaQuery.setProfile("rich");
-		
+		europeanaQuery.setTitle(genre);
 		
         EuropeanaApi2Client europeanaClient = new EuropeanaApi2Client();
 		EuropeanaApi2Results res = new EuropeanaApi2Results();
@@ -108,12 +62,11 @@ public class SearchController /*extends SimpleFormController */ {
 			e1.printStackTrace();
 		}
 	 
-		List<SearchObj> jspList = new ArrayList<SearchObj>(); //send this to search.jsp
+		List<GenreObj> jspList = new ArrayList<GenreObj>(); //send this to search.jsp
        
 	    int count = 0;
         for (EuropeanaApi2Item item : res.getAllItems()) {
-        	
-        	jspList.add(new SearchObj(item.getDcCreator(), item.getTitle(), item.getEuropeanaCollectionName(), item.getEdmIsShownBy(), item.getObjectURL() ) );
+        	jspList.add(new GenreObj(item.getTitle(),item.getEdmIsShownBy(), item.getObjectURL() ) );
         		
         	 System.out.println();
 	         System.out.println("**** " + (count++ + 1));
@@ -126,7 +79,7 @@ public class SearchController /*extends SimpleFormController */ {
 	                 + item.getDataProvider());
 		}
 
-		ModelAndView mav = new ModelAndView("search"); //route to search.jsp
+		ModelAndView mav = new ModelAndView("genre"); //route to search.jsp
 		mav.addObject("lists", jspList); //add jspList to the ModelAndView
 		
 		return mav;
@@ -134,12 +87,12 @@ public class SearchController /*extends SimpleFormController */ {
 	
 	
 	
-	@RequestMapping(value="/search", method=RequestMethod.GET)
+	@RequestMapping(value="/genre", method=RequestMethod.GET)
 	public ModelAndView handleGet(Map<String, Object> map) {
 		
 		System.out.println("GET");
 
-		ModelAndView mav = new ModelAndView("search");
+		ModelAndView mav = new ModelAndView("genre");
 		
 		return mav;
 	}

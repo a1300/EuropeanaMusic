@@ -24,24 +24,6 @@
 	
 	<form method="post" action="${model.pageName}" id="register">
 	
-	<!-- 	     <div class="container1" style=" float: left;position: relative;left: 50%;">
-  			<div class="fixer-container" style="float: left;position: relative;left: -50%;">
-	
-	     	   <div style="float: center;text-align:center; padding-left:20px;">
-		    	    <br>
-		    	    	<div class="well well-sm">
-		    	    		
-		    	    	In this site you will get information about the rights of the songs in europeana and
-		    	     	 you could hear a preview of the song (if the rights allow it).
-		    	    	<p>The probability to get a preview of a song is higher by selecting "free use"</p>
-		    	    	<p>If you want to get different versions of a song just write the name of the song leaving the Author empty.</p>
-		    	    	
-		    	    	</div>
-		 </div></div></div>
-		  -->
-		  
-		  
-		  
 		   <div class="container-fluid">
 					<div class="well well-sm" style="text-align:center;">
 		    	    	
@@ -108,7 +90,7 @@
 				</div>
 			</div>	
 		<br>
- 			<div id="send" style="float: left; padding-left:20px; width: 10px;">
+ 			<div class="" id="send" style="float: left; padding-left:20px; width: 10px;">
  				<input class="btn btn-lg btn-success" type="submit" value="send"/>
  			</div>		
  		<br>
