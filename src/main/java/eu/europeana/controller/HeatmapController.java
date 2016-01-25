@@ -21,16 +21,28 @@ import eu.europeana.api.client.search.query.EuropeanaComplexQuery;
 import eu.europeana.model.LongLat;
 import eu.europeana.model.RoyaltyObj;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonElement;
+
+
 @Controller
 public class HeatmapController {
 
 	@RequestMapping(value="/heatmap", method=RequestMethod.GET)
 	public ModelAndView getHeatmap() {
 		
+		//test
+		try {
+			Gson gson = new Gson();
+			
+		
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
 		ModelAndView mav = new ModelAndView("heatmap");
-		
 		mav.addObject("lists", returnDummyValues() );
-		
 		return mav;
 	}
 	
@@ -114,3 +126,4 @@ public class HeatmapController {
 		return list;
 	}
 }
+
