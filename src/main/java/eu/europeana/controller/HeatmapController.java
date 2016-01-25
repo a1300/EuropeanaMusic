@@ -2,10 +2,13 @@ package eu.europeana.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.stereotype.Controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import eu.europeana.model.LongLat;
 
@@ -23,10 +26,19 @@ public class HeatmapController {
 	}
 	
 	@RequestMapping(value="/heatmap", method=RequestMethod.POST)
-	public ModelAndView postHeatmap() {
+	public ModelAndView postHeatmap(
+			@RequestParam("search") String search,
+			@RequestParam("contentType") String contentType,
+			HttpServletRequest request) {
+	
+		System.out.println("serach: " + request.getParameter("search"));
+		System.out.println("contentType: " + request.getParameter("contentType"));
+		
+		
+		
+		
 		
 		ModelAndView mav = new ModelAndView("heatmap");
-		
 		mav.addObject("lists", returnDummyValues() );
 		
 		return mav;

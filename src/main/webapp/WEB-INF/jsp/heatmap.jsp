@@ -41,7 +41,7 @@
 		    	    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
 		    	    	<label class="pull-left" for="search">Search:</label>
 		    	    	<!-- if you don't specify a string, then -->
-		    	    	<input type="text" class="form-control" name="name" id="search" placeholder="e.g. Folklore" />
+		    	    	<input type="text" class="form-control" name="search" id="search" placeholder="e.g. Folklore" />
 		    	    </div>
 		    	 </div>
 	    	 </div>
