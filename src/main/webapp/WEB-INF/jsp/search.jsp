@@ -92,23 +92,19 @@
 							<div class="col-lg-6 col-sm-12 well well-sm text-left">
 								
 								<c:forEach var="sub" items="${listValue.name}">
-									<p>creator:</p>
-									<p>${sub}</p>
+									<p>creator: ${sub}</p>
 								</c:forEach>
 								
 								<c:forEach var="sub2" items="${listValue.collection}">
-									<p>collection:</p>
-									<p>${sub2}</p>
+									<p>collection: ${sub2}</p>
 								</c:forEach>
 								
 								<c:forEach var="sub3" items="${listValue.shownBy}">
-									<p>shown by: </p>
-									<p>${sub3}</p>
+									<p>shown by: ${sub3}</p>
 								</c:forEach>
 								
 								<c:forEach var="sub4" items="${listValue.title}">
-									<p>title:</p>
-									<p>${sub4}</p>
+									<p>title: ${sub4}</p>
 								</c:forEach>
 								
 								<a href="${listValue.url}">Link</a>
