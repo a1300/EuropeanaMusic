@@ -131,6 +131,7 @@ public class SearchController /*extends SimpleFormController */ {
 		
 		QueryString queryString = new QueryString(list);
 
+		System.out.println("query from queryString : " + queryString.getQueryUri() + queryString.getQueryString());
 		 //create the query object
 		Api2Query europeanaQuery = new Api2Query();
 			europeanaQuery.setCreator(name);
@@ -139,8 +140,9 @@ public class SearchController /*extends SimpleFormController */ {
 			europeanaQuery.setCountry(countryGermany);
 			europeanaQuery.setLanguage(languageGerman);
 
+
 			
-	//	europeanaQuery.setQueryParams(queryString.getQueryString());
+	europeanaQuery.setQueryParams(queryString.getQueryString());
 		
        EuropeanaApi2Client europeanaClient = new EuropeanaApi2Client();
        
@@ -157,11 +159,12 @@ public class SearchController /*extends SimpleFormController */ {
 	 
 		List<SearchObj> objList = new ArrayList<SearchObj>();
        
+		System.out.println(res.getTotalResults());
 		
 	    int count = 0;
         for (EuropeanaApi2Item item : res.getAllItems()) {
         	
-        	objList.add(new SearchObj(item.getGuid(), item.getTitle(), item.getLanguage(), item.getC ));
+        	objList.add(new SearchObj(item.getGuid(), item.getTitle(),item.getLanguage(),));
         	
 	    	 System.out.println();
 	         System.out.println("**** " + (count++ + 1));

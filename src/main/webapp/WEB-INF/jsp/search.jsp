@@ -51,16 +51,16 @@
            	<div  class="radio-inline" data-toggle="buttons-radio" style="float: left;padding-left:20px width: 350px;">
 					<p>Language:		</p>
 		        	<label class="radio-inline">
-  						<input type="radio" name="inlineRadioOptions" value="languageEnglish" 	id="languageEnglish"> English
+  						<input type="radio" name="inlineRadioOptions1" value="languageEnglish" 	id="languageEnglish"> English
 					</label>
 					<label class="radio-inline">
-					  	<input type="radio" name="inlineRadioOptions" value="languageGerman" 	id="languageGerman"> German
+					  	<input type="radio" name="inlineRadioOptions1" value="languageGerman" 	id="languageGerman"> German
 					</label>
 					<label class="radio-inline">
-	 	 				<input type="radio" name="inlineRadioOptions" value="languageFrench" 	id="languageFrench"> French
+	 	 				<input type="radio" name="inlineRadioOptions1" value="languageFrench" 	id="languageFrench"> French
 					</label>
 					<label class="radio-inline">
-	 	 				<input type="radio" name="inlineRadioOptions" value="languageSpanish"	id="languageSpanish"> Spanish
+	 	 				<input type="radio" name="inlineRadioOptions1" value="languageSpanish"	id="languageSpanish"> Spanish
 					</label>
  				<br>	
 			</div>
@@ -86,27 +86,34 @@
  			<div id="send" style="float: left; padding-left:20px; width: 10px;">
  				<input type="submit" value="send"/>
  			</div>		
- 		
  		<br>
  		
  		<hr style="padding-left:20px; height: 3px; border: 0; border-top: 1px solid #ccc;">
 	
 	</form>
 	
-	
+		<br/>
+		<br/>
+		<br/>
 		
-	<c:if test="${not empty lists}">
-			<ul>
-				<c:forEach var="listValue" items="${lists}">
-						<p>${listValue.name}</p>
-						<c:forEach var="sub" items="${listValue.titel}">
-							<p>${sub}</p>
+		<div class="container">
+			<div class="row">
+				<c:if test="${not empty lists}">
+					<ul>
+						<c:forEach var="listValue" items="${lists}">
+							<div class="col-lg-6 col-sm-12 well well-sm text-left">
+								<p>${listValue.name}</p>
+								<c:forEach var="sub" items="${listValue.titel}">
+									<p>${sub}</p>
+								</c:forEach>
+								<br/>
+							</div>
 						</c:forEach>
-					<br/>
-				</c:forEach>
-			</ul>
-		</c:if>
- 	
+					</ul>
+				</c:if>
+			</div>
+		</div>
+		
  	
 </body>
 </html>
