@@ -104,45 +104,49 @@
 		<br/>
 		<br/>
 		
-		<div class="container">
-			<div class="row">
-				<c:if test="${not empty lists}">
+		<c:choose>
+			<c:when test="${not empty lists}">
 					<ul>
 						<c:forEach var="listValue" items="${lists}">
-							<div class="col-lg-6 col-sm-12 well well-sm text-left">
-					
-								
-								<c:forEach var="sub" items="${listValue.name}">
-									<p>
-										<h4><span class="label label-default">creator:</span>  ${sub}</h4>
-									</p>
-								</c:forEach>
-								
-								<c:forEach var="sub2" items="${listValue.collection}">
-									<p><b>collection:</b> ${sub2}</p>
-								</c:forEach>
-								
-								<c:forEach var="sub4" items="${listValue.title}">
-									<p><b>title:</b> ${sub4}</p>
-								</c:forEach>
-								
-								<div class="btn btn-info btn-sm">
-									<a href="${listValue.url}" target="_blank">Europeana Link</a>
+								<div class="col-lg-6 col-sm-12 well well-sm text-left">
+									<div class="panel panel-primary">
+											<div class="panel-heading">
+												<c:forEach var="sub" items="${listValue.name}">
+													<p><b>creator:</b>  ${sub}</p>
+												</c:forEach>
+											</div>	
+											<div class="panel-body panel-info">
+													<c:forEach var="sub2" items="${listValue.collection}">
+														<p><b>collection:</b> ${sub2}</p>
+													</c:forEach>
+													
+													<c:forEach var="sub4" items="${listValue.title}">
+														<p><b>title:</b> ${sub4}</p>
+													</c:forEach>
+													
+													<div class="btn btn-info btn-sm">
+														<a href="${listValue.url}" target="_blank">Europeana Link</a>
+													</div>
+													
+													<div class="btn btn-info btn-sm">
+														<c:forEach var="sub3" items="${listValue.shownBy}">
+															<a href="${sub3}" target="_blank">Preview</a>
+														</c:forEach>
+													</div>
+											</div>
+									</div>
 								</div>
-								
-								<div class="btn btn-info btn-sm">
-									<c:forEach var="sub3" items="${listValue.shownBy}">
-										<a href="${sub3}" target="_blank">Preview</a>
-									</c:forEach>
-								</div>
-					
-								
-							</div>
 						</c:forEach>
 					</ul>
-				</c:if>
+			</c:when>
+			<c:otherwise>
+			<div style="text-align:center;">		
+				<p><b> :(     Sorry, we didn't found any item for your search.     :( </b></p>
+				<p>		(somewhere in the world a bunny has just cried... )</p>
 			</div>
-		</div>
+		</c:otherwise>
+	
+		</c:choose>
 		
 </body>
 </html>
