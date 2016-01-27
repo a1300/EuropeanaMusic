@@ -57,9 +57,10 @@ public class HeatmapController {
 		
 		//make the query
 		Api2Query europeanaQuery  = new Api2Query();
-		europeanaQuery.setTitle(search);
+		europeanaQuery.setTitle(search);	// i changed setTitle() for setAuthor to make a query that is valid. 
+											// I already saw the query that we get changing to author and is valid. 
 		europeanaQuery.setProfile("rich");
-		//europeanaQuery.setWholeSubQuery("longitude");
+		europeanaQuery.setWholeSubQuery("pl_wgs84_pos_lat:[30%20TO%2080]&pl_wgs84_pos_long:[30%20TO%2080]");//this string gives the query that we need
 		
 		String content = request.getParameter("contentType");
 		if(content.trim().equals(EuropeanaComplexQuery.TYPE.IMAGE)) {
@@ -72,8 +73,16 @@ public class HeatmapController {
 			europeanaQuery.setType(content);
 		}
 		
+//		//Here set the longitude and latitiude min and max
+//		europeanaQuery.setEdmPlaceLatitudeMax("80");
+//		europeanaQuery.setEdmPlaceLatitudeMin("30");
+//		europeanaQuery.setEdmPlaceLongitudeMax("80");
+//		europeanaQuery.setEdmPlaceLongitudeMin("20");
 		
 		EuropeanaApi2Client europeanaClient = new EuropeanaApi2Client();
+		System.out.println("get sub queries "+europeanaQuery.getSubQueries());
+	
+		
 		EuropeanaApi2Results results = new EuropeanaApi2Results();
 		try{
 			results = europeanaClient.searchApi2(europeanaQuery, 15, 1);
@@ -86,6 +95,10 @@ public class HeatmapController {
 		
 		//test find longitude and latitude
 		for (EuropeanaApi2Item item: results.getAllItems()){
+
+			System.out.println("latitude : " + item.getEdmPlaceLatitude());
+			System.out.println("longitude : " + item.getEdmPlaceLongitude());
+			
 			System.out.println("item: " + item.getLink());
 			System.out.println("getEdmIsShownAt:");
 			for(String s : item.getEdmPreview()) {
@@ -114,7 +127,7 @@ public class HeatmapController {
 		
 		int wieViel = (int) randInt(15, 30);
 		for(int i = 0; i < wieViel; ++i) {
-			System.out.println("random: " + randInt(30, 50));
+//			System.out.println("random: " + randInt(30, 50));
 			list.add(new LongLat(randInt(40, 50), randInt(10, 30), 1.0));
 		}
 		
