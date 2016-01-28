@@ -60,7 +60,12 @@ public class HeatmapController {
 		europeanaQuery.setTitle(search);	// i changed setTitle() for setAuthor to make a query that is valid. 
 											// I already saw the query that we get changing to author and is valid. 
 		europeanaQuery.setProfile("rich");
-		europeanaQuery.setWholeSubQuery("pl_wgs84_pos_lat:[30%20TO%2080]&pl_wgs84_pos_long:[30%20TO%2080]");//this string gives the query that we need
+		
+		
+		//this query works
+		europeanaQuery.setWholeSubQuery("pl_wgs84_pos_lat%3A%5B20+TO+70%5D");//this string gives the query that we need
+		//europeanaQuery.setEdmPlaceLatitudeMax(edmPlaceLatitudeMax);
+		
 		
 		String content = request.getParameter("contentType");
 		if(content.trim().equals(EuropeanaComplexQuery.TYPE.IMAGE)) {
@@ -85,7 +90,7 @@ public class HeatmapController {
 		
 		EuropeanaApi2Results results = new EuropeanaApi2Results();
 		try{
-			results = europeanaClient.searchApi2(europeanaQuery, 15, 1);
+			results = europeanaClient.searchApi2(europeanaQuery, 1000, 1);
 		} catch(IOException e) {
 			e.printStackTrace();
 		} catch(EuropeanaApiProblem e1) {
@@ -93,22 +98,36 @@ public class HeatmapController {
 		}
 		
 		
-		//test find longitude and latitude
-		for (EuropeanaApi2Item item: results.getAllItems()){
+		List<LongLat> list = new ArrayList<LongLat>();
+		
+		if(results.getAllItems().size() == 0) {
+			System.out.println("Size of List is 0");
+		} else {		
+			//test find longitude and latitude
+			for (EuropeanaApi2Item item: results.getAllItems()) {
+				System.out.println("START ITEM");
+				try {
+					list.add(new LongLat(
+							Double.parseDouble(item.getEdmPlaceLatitude().get(0)),
+							Double.parseDouble(item.getEdmPlaceLongitude().get(0)),
+							1.0  
+						));
+				} catch(NumberFormatException nfe) {
+					System.out.println("Number format exception");
+					System.out.println("EXCEPTION after  " + list.size());
+				}
+	
+				System.out.println("latitude : " + item.getEdmPlaceLatitude());
+				System.out.println("longitude : " + item.getEdmPlaceLongitude());
 
-			System.out.println("latitude : " + item.getEdmPlaceLatitude());
-			System.out.println("longitude : " + item.getEdmPlaceLongitude());
-			
-			System.out.println("item: " + item.getLink());
-			System.out.println("getEdmIsShownAt:");
-			for(String s : item.getEdmPreview()) {
-				System.out.println("edm: " + s);
+				System.out.println("END ITEM\n");
 			}
 		}
 		
 		
 		ModelAndView mav = new ModelAndView("heatmap");
-		mav.addObject("lists", returnDummyValues() );
+		mav.addObject("lists", list);
+		//mav.addObject("lists", returnDummyValues() ); random values
 		
 		return mav;
 	}
