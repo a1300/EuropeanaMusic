@@ -20,6 +20,7 @@ import eu.europeana.api.client.model.search.EuropeanaApi2Item;
 import eu.europeana.api.client.search.query.Api2Query;
 import eu.europeana.api.client.search.query.EuropeanaComplexQuery;
 import eu.europeana.model.LongLat;
+import eu.europeana.model.Results;
 
 @Controller
 public class HeatmapController {
@@ -31,6 +32,11 @@ public class HeatmapController {
 		
 		List<LongLat> list =  beethovenImage();
 		mav.addObject("lists", list);
+		
+		//test
+		if(list.size() == 0) {
+			mav.addObject("result", new Results(false));
+		}
 		
 		return mav;
 	}
@@ -98,8 +104,13 @@ public class HeatmapController {
 		
 		List<LongLat> list = new ArrayList<LongLat>();
 		
+		
+		ModelAndView mav = new ModelAndView("heatmap");
+		
+		
 		if(results.getAllItems().size() == 0) {
 			System.out.println("Size of List is 0");
+			mav.addObject("result", new Results(false));
 		} else {		
 			for (EuropeanaApi2Item item: results.getAllItems()) {
 				try {
@@ -118,7 +129,6 @@ public class HeatmapController {
 		}
 
 		
-		ModelAndView mav = new ModelAndView("heatmap");
 		mav.addObject("lists", list);
 		
 		return mav;

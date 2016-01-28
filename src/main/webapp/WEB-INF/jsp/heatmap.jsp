@@ -85,7 +85,18 @@
             max: 8,
             data: [ { lat: 50.6408, lng: 10.7728, count: 3 } ]
 		};
+		
+		var displayMarker = false;
 	</script>
+	
+	<!-- test -->
+	<c:if test="${result.hasResults == false}">
+		<script>
+			//now it should display a marker!
+			var displayMarker = true;
+		</script>
+	</c:if>
+	
 	<c:if test="${not empty lists}">
 		<ul>
 			<c:forEach var="listValue" items="${lists}">
@@ -109,7 +120,8 @@
 		//test
 		console.log("testVal:");
 		console.log(testVal);
-	
+		
+		
         var testData = {
             max: 8, //was soll das?
             data: [ { lat: 24.6408, lng: 46.7728, count: 3 },
@@ -157,13 +169,11 @@
 		    'Satellite': MQ.satelliteLayer()
 	    }).addTo(map);
 
-	    var marker = L.marker([51.731701, 0.0]).addTo(map);
-	    marker.bindPopup("<b>Searched for</b><br>'Beethoven'").openPopup();
-
+	    if(displayMarker === true) {
+	    	var marker = L.marker([51.731701, 0.0]).addTo(map);
+	    	marker.bindPopup("<b>No Results</b>").openPopup();
+	    }
 	</script>
-	
-
-	
 
 </body>
 </html>
