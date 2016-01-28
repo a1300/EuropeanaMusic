@@ -64,7 +64,7 @@
 			    	 <!-- buttons -->
 			    	 <div class="form-group">
 			    	 	<button type="submit" class="btn btn-lg btn-primary btn-block">Search</button>
-			   	    	<button type="submit" class="btn btn-lg btn-success btn-block">Default Search</button>
+			   	    	<!-- <button type="submit" class="btn btn-lg btn-success btn-block">Default Search</button>-->
 			    	 </div>
 			    	 
 		    	 </div><!-- end allignment -->
@@ -83,7 +83,8 @@
 	<script>
 		var testVal = {
             max: 8,
-            data: [ { lat: 50.6408, lng: 10.7728, count: 3 } ]
+            //data: [ { lat: 50.6408, lng: 10.7728, count: 3 } ]
+			data: []
 		};
 		
 		var displayMarker = false;
@@ -99,14 +100,18 @@
 	
 	<c:if test="${not empty lists}">
 		<ul>
+			<script>
+				console.log("testOutput:");
+				console.log(testVal.data);
+				//testVal.data.length = 0; //setting to 0
+			</script>
+		
 			<c:forEach var="listValue" items="${lists}">
 				<script>
 					testVal.data.push({lat: "${listValue.latitude}",
 										  lng: "${listValue.longitude}",
 										  count: "${listValue.count}"}
 										);
-					//console.log(testVal.data);
-					
 				</script>
 				<br/>
 			</c:forEach>
@@ -117,12 +122,7 @@
 	<!-- drawing data into heatmap, must be after heatmapDependency.jsp import -->
 	<script>
     
-		//test
-		console.log("testVal:");
-		console.log(testVal);
-		
-		
-        var testData = {
+		var testData = {
             max: 8, //was soll das?
             data: [ { lat: 24.6408, lng: 46.7728, count: 3 },
                     { lat: 50.75, lng: -1.55, count: 1 },
