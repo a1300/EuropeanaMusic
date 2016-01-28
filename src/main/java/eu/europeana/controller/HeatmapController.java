@@ -20,7 +20,6 @@ import eu.europeana.api.client.model.search.EuropeanaApi2Item;
 import eu.europeana.api.client.search.query.Api2Query;
 import eu.europeana.api.client.search.query.EuropeanaComplexQuery;
 import eu.europeana.model.LongLat;
-import eu.europeana.model.RoyaltyObj;
 
 @Controller
 public class HeatmapController {
@@ -30,7 +29,8 @@ public class HeatmapController {
 		
 		ModelAndView mav = new ModelAndView("heatmap");
 		
-		mav.addObject("lists", returnDummyValues() );
+		List<LongLat> list =  beethovenImage();
+		mav.addObject("lists", list);
 		
 		return mav;
 	}
@@ -122,6 +122,45 @@ public class HeatmapController {
 		mav.addObject("lists", list);
 		
 		return mav;
+	}
+	
+	
+	//a http-GET default visualisation
+	public List<LongLat> beethovenImage() {
+		
+		
+		Api2Query europeanaQuery  = new Api2Query();
+		europeanaQuery.setTitle("Beethoven");  
+		europeanaQuery.setProfile("rich");
+		europeanaQuery.setType(EuropeanaComplexQuery.TYPE.IMAGE);
+		
+		//latitude for Europe
+		europeanaQuery.setWholeSubQuery("pl_wgs84_pos_lat%3A%5B20+TO+70%5D");
+		
+		EuropeanaApi2Client europeanaClient = new EuropeanaApi2Client();
+		EuropeanaApi2Results results = new EuropeanaApi2Results();
+		try{
+			results = europeanaClient.searchApi2(europeanaQuery, 10000, 1);
+		} catch(IOException e) {
+			e.printStackTrace();
+		} catch(EuropeanaApiProblem e1) {
+			e1.printStackTrace();
+		}
+		
+		List<LongLat> list = new ArrayList<LongLat>();
+		for (EuropeanaApi2Item item: results.getAllItems()) {
+			try {
+				list.add(new LongLat(
+						Double.parseDouble(item.getEdmPlaceLatitude().get(0)),
+						Double.parseDouble(item.getEdmPlaceLongitude().get(0)),
+						1.0  
+					));
+			} catch(NumberFormatException nfe) {
+				System.out.println("Number format exception in beethovenString()");
+			}
+		}
+		
+		return list;
 	}
 	
 	

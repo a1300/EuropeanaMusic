@@ -157,7 +157,8 @@
 		    'Satellite': MQ.satelliteLayer()
 	    }).addTo(map);
 
-	    var marker = L.marker([40.731701, -73.993411]).addTo(map);
+	    var marker = L.marker([51.731701, 0.0]).addTo(map);
+	    marker.bindPopup("<b>Searched for</b><br>'Beethoven'").openPopup();
 
 	</script>
 	
